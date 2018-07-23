@@ -1,0 +1,17 @@
+{
+  "name": "blog-as-a-portfolio",
+  "version": "1.0.0",
+  "description": "a blog that stands as a personal location to post your resume information, projects, ect.",
+  "main": "app.js",
+  "scripts": {
+    "test": "reee"
+  },
+  "author": "Bobbylee Ingalls",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-start": "0.0.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
+  }
+}
