@@ -1,0 +1,53 @@
+/* 
+Buttons
+Navbar
+Footer
+Standard Div's
+Background
+*/
+
+/* Navbar ID's */
+#navbarExampleTransparentExample {
+    background-color: #C44900
+}
+
+#home {
+    color: #ffffff
+}
+#blog {
+    color: #ffffff
+}
+#aboutMe {
+    color: #ffffff
+}
+#navbarAboutMeDropdownText {
+    color: #020202
+}
+
+.button {
+    background-color: #020202
+}
+
+.fa-github {
+    color: #ffffff
+}
+#githubText {
+    color: #ffffff
+}
+
+
+.fa-facebook-square {
+    color: #3b5998
+}
+#facebookText {
+    color: #ffffff
+}
+
+
+.fa-linkedin {
+    color: #007bb6
+}
+#linkedinText {
+    color: #ffffff
+}
+
