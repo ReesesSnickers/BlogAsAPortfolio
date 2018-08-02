@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The BGI Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="../js/index.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   </head>
@@ -36,27 +37,27 @@
       
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="file:///Users/b0i000j/Desktop/BaaP/html/home.html">
+            <a class="navbar-item" href="./home.html" id="home">
               Home
             </a>
-            <a class="navbar-item" href="">
+            <a class="navbar-item" href="./blog.html" id="blog">
               Blog
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="">
+              <a class="navbar-link" href="" id="aboutMe">
                 About Me
               </a>
               <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="">
+                <a class="navbar-item" href="./overview.html" id="navbarAboutMeDropdownText">
                   Overview
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item" href="./languages.html" id="navbarAboutMeDropdownText">
                   Languages
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item" href="./projecthistory.html" id="navbarAboutMeDropdownText">
                   Project History
                 </a>
-                <a class="navbar-item" href="">
+                <a class="navbar-item" href="./specialthanks.html" id="navbarAboutMeDropdownText">
                   Special Thanks
                 </a>
               </div>
@@ -71,7 +72,7 @@
                     <span class="icon">
                       <i class="fab fa-facebook-square"></i>
                     </span>
-                    <span>
+                    <span id="facebookText">
                       Facebook
                     </span>
                   </a>
@@ -79,9 +80,11 @@
                 <p class="control">
                   <a class="button" href="https://github.com/ReesesSnickers">
                     <span class="icon">
-                      <i class="fab fa-github-square"></i>
+                      <i class="fab fa-github"></i>
                     </span>
-                    <span>Github</span>
+                    <span id="githubText">
+                      Github
+                    </span>
                   </a>
                 </p>
                 <p class="control">
@@ -89,7 +92,9 @@
                     <span class="icon">
                       <i class="fab fa-linkedin"></i>
                     </span>
-                    <span>Linkedin</span>
+                    <span id="linkedinText">
+                      Linkedin
+                    </span>
                   </a>
                 </p>
               </div>
