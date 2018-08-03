@@ -49,6 +49,17 @@ Background
     color: #ffffff
 }
 
+/* Hero */
+.hero.home {
+    background: url(../images/ESCRBackground.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero.home > div {
+    min-height: 100vh;
+}
+
 
 /* Body */
 #languageHeaders {
