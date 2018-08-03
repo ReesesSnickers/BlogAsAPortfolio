@@ -1,12 +1,10 @@
 /* 
-Buttons
-Navbar
 Footer
 Standard Div's
 Background
 */
 
-/* Navbar ID's */
+/* Navbar */
 #navbarExampleTransparentExample {
     background-color: #C44900
 }
@@ -51,3 +49,13 @@ Background
     color: #ffffff
 }
 
+
+/* Body */
+#languageHeaders {
+    background-color: #C44900
+}
+
+/* Footer */
+.footer {
+    background-color: #C44900
+}
