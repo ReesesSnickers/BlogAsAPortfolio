@@ -49,8 +49,13 @@ Background
     color: #ffffff
 }
 
-/* Footer */
 
+/* Body */
+#languageHeaders {
+    background-color: #C44900
+}
+
+/* Footer */
 .footer {
     background-color: #C44900
 }
