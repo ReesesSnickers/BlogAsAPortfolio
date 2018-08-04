@@ -6,47 +6,47 @@ Background
 
 /* Navbar */
 #navbarExampleTransparentExample {
-    background-color: #C44900
+    background-color: #C44900;
 }
 
 #home {
-    color: #ffffff
+    color: #ffffff;
 }
 #blog {
-    color: #ffffff
+    color: #ffffff;
 }
 #aboutMe {
-    color: #ffffff
+    color: #ffffff;
 }
 #navbarAboutMeDropdownText {
-    color: #020202
+    color: #020202;
 }
 
 .button {
-    background-color: #020202
+    background-color: #020202;
 }
 
 .fa-github {
-    color: #ffffff
+    color: #ffffff;
 }
 #githubText {
-    color: #ffffff
+    color: #ffffff;
 }
 
 
 .fa-facebook-square {
-    color: #3b5998
+    color: #3b5998;
 }
 #facebookText {
-    color: #ffffff
+    color: #ffffff;
 }
 
 
 .fa-linkedin {
-    color: #007bb6
+    color: #007bb6;
 }
 #linkedinText {
-    color: #ffffff
+    color: #ffffff;
 }
 
 /* Hero */
@@ -60,13 +60,39 @@ Background
     min-height: 100vh;
 }
 
+.header {
+    background-color: #C44900;
+}
 
 /* Body */
 #languageHeaders {
-    background-color: #C44900
+    background-color: #C44900;
+}
+#headerColumns {
+    box-sizing: border-box;
+    margin-top: 3vh;
+}
+#specialThanksHeaderColumn {
+    box-sizing: border-box;
+    margin-top: 3vh;
+    background-color: #C44900;
+}
+
+.fa-wix {
+    color: #ffffff;
+}
+#wixText {
+    color: #ffffff;
+}
+
+.fa-twitter {
+    color: #1DA1F2
+}
+#twitterText {
+    color: #ffffff;
 }
 
 /* Footer */
 .footer {
-    background-color: #C44900
+    background-color: #C44900;
 }
