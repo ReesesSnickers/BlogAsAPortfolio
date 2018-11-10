@@ -1,0 +1,881 @@
+"""my AboutMe content"""
+type About {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  aboutMeIntro: String
+  dateModified: DateTime
+  aboutMeBody: String
+  birthDay: DateTime
+  email: String
+  linkedIn: String
+  gitHub: String
+  twitter: String
+  facebook: String
+  instagram: String
+  website: String
+}
+
+type AboutAggregator {
+  count: Int
+}
+
+type AboutConnection {
+  values: [About]
+  groupBy: AboutGroupBy
+  aggregate: AboutAggregator
+}
+
+type AboutConnection_id {
+  key: ID
+  connection: AboutConnection
+}
+
+type AboutConnectionAboutMeBody {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionAboutMeIntro {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionBirthDay {
+  key: DateTime
+  connection: AboutConnection
+}
+
+type AboutConnectionCreatedAt {
+  key: DateTime
+  connection: AboutConnection
+}
+
+type AboutConnectionDateModified {
+  key: DateTime
+  connection: AboutConnection
+}
+
+type AboutConnectionEmail {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionFacebook {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionGitHub {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionInstagram {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionLinkedIn {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionTwitter {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutConnectionUpdatedAt {
+  key: DateTime
+  connection: AboutConnection
+}
+
+type AboutConnectionWebsite {
+  key: String
+  connection: AboutConnection
+}
+
+type AboutGroupBy {
+  _id: [AboutConnection_id]
+  createdAt: [AboutConnectionCreatedAt]
+  updatedAt: [AboutConnectionUpdatedAt]
+  aboutMeIntro: [AboutConnectionAboutMeIntro]
+  dateModified: [AboutConnectionDateModified]
+  aboutMeBody: [AboutConnectionAboutMeBody]
+  birthDay: [AboutConnectionBirthDay]
+  email: [AboutConnectionEmail]
+  linkedIn: [AboutConnectionLinkedIn]
+  gitHub: [AboutConnectionGitHub]
+  twitter: [AboutConnectionTwitter]
+  facebook: [AboutConnectionFacebook]
+  instagram: [AboutConnectionInstagram]
+  website: [AboutConnectionWebsite]
+}
+
+input AboutInput {
+  aboutMeIntro: String
+  dateModified: DateTime
+  aboutMeBody: String
+  birthDay: DateTime
+  email: String
+  linkedIn: String
+  gitHub: String
+  twitter: String
+  facebook: String
+  instagram: String
+  website: String
+}
+
+"""People I want to give special thanks to."""
+type Appreciation {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  fullName: String
+  birthDay: String
+  Photo: UploadFile
+  email: String
+  gitHubRepo: String
+  linkedIn: String
+  webSite: String
+  specialThanks: String
+  association: String
+  twitter: String
+}
+
+type AppreciationAggregator {
+  count: Int
+}
+
+type AppreciationConnection {
+  values: [Appreciation]
+  groupBy: AppreciationGroupBy
+  aggregate: AppreciationAggregator
+}
+
+type AppreciationConnection_id {
+  key: ID
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionAssociation {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionBirthDay {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionCreatedAt {
+  key: DateTime
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionEmail {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionFullName {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionGitHubRepo {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionLinkedIn {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionPhoto {
+  key: ID
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionSpecialThanks {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionTwitter {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionUpdatedAt {
+  key: DateTime
+  connection: AppreciationConnection
+}
+
+type AppreciationConnectionWebSite {
+  key: String
+  connection: AppreciationConnection
+}
+
+type AppreciationGroupBy {
+  _id: [AppreciationConnection_id]
+  createdAt: [AppreciationConnectionCreatedAt]
+  updatedAt: [AppreciationConnectionUpdatedAt]
+  fullName: [AppreciationConnectionFullName]
+  birthDay: [AppreciationConnectionBirthDay]
+  Photo: [AppreciationConnectionPhoto]
+  email: [AppreciationConnectionEmail]
+  gitHubRepo: [AppreciationConnectionGitHubRepo]
+  linkedIn: [AppreciationConnectionLinkedIn]
+  webSite: [AppreciationConnectionWebSite]
+  specialThanks: [AppreciationConnectionSpecialThanks]
+  association: [AppreciationConnectionAssociation]
+  twitter: [AppreciationConnectionTwitter]
+}
+
+input AppreciationInput {
+  fullName: String
+  birthDay: String
+  Photo: ID
+  email: String
+  gitHubRepo: String
+  linkedIn: String
+  webSite: String
+  specialThanks: String
+  association: String
+  twitter: String
+}
+
+input createAboutInput {
+  data: AboutInput
+}
+
+type createAboutPayload {
+  about: About
+}
+
+input createAppreciationInput {
+  data: AppreciationInput
+}
+
+type createAppreciationPayload {
+  appreciation: Appreciation
+}
+
+input createPostInput {
+  data: PostInput
+}
+
+type createPostPayload {
+  post: Post
+}
+
+input createRoleInput {
+  data: RoleInput
+}
+
+type createRolePayload {
+  role: UsersPermissionsRole
+}
+
+input createUserInput {
+  data: UserInput
+}
+
+type createUserPayload {
+  user: UsersPermissionsUser
+}
+
+input createVideosInput {
+  data: VideosInput
+}
+
+type createVideosPayload {
+  video: Videos
+}
+
+"""
+The `DateTime` scalar represents a date and time following the ISO 8601 standard
+"""
+scalar DateTime
+
+input deleteAboutInput {
+  where: InputID
+}
+
+type deleteAboutPayload {
+  about: About
+}
+
+input deleteAppreciationInput {
+  where: InputID
+}
+
+type deleteAppreciationPayload {
+  appreciation: Appreciation
+}
+
+input deletePostInput {
+  where: InputID
+}
+
+type deletePostPayload {
+  post: Post
+}
+
+input deleteRoleInput {
+  where: InputID
+}
+
+type deleteRolePayload {
+  role: UsersPermissionsRole
+}
+
+input deleteUserInput {
+  where: InputID
+}
+
+type deleteUserPayload {
+  user: UsersPermissionsUser
+}
+
+input deleteVideosInput {
+  where: InputID
+}
+
+type deleteVideosPayload {
+  video: Videos
+}
+
+input FileInput {
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  related: [ID]
+}
+
+input InputID {
+  id: ID!
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+union Morph = About | createAboutPayload | updateAboutPayload | deleteAboutPayload | AboutConnection | AboutAggregator | AboutGroupBy | AboutConnection_id | AboutConnectionCreatedAt | AboutConnectionUpdatedAt | AboutConnectionAboutMeIntro | AboutConnectionDateModified | AboutConnectionAboutMeBody | AboutConnectionBirthDay | AboutConnectionEmail | AboutConnectionLinkedIn | AboutConnectionGitHub | AboutConnectionTwitter | AboutConnectionFacebook | AboutConnectionInstagram | AboutConnectionWebsite | Appreciation | createAppreciationPayload | updateAppreciationPayload | deleteAppreciationPayload | AppreciationConnection | AppreciationAggregator | AppreciationGroupBy | AppreciationConnection_id | AppreciationConnectionCreatedAt | AppreciationConnectionUpdatedAt | AppreciationConnectionFullName | AppreciationConnectionBirthDay | AppreciationConnectionPhoto | AppreciationConnectionEmail | AppreciationConnectionGitHubRepo | AppreciationConnectionLinkedIn | AppreciationConnectionWebSite | AppreciationConnectionSpecialThanks | AppreciationConnectionAssociation | AppreciationConnectionTwitter | Post | createPostPayload | updatePostPayload | deletePostPayload | PostConnection | PostAggregator | PostGroupBy | PostConnection_id | PostConnectionCreatedAt | PostConnectionUpdatedAt | PostConnectionBody | PostConnectionTitle | PostConnectionCreated | PostConnectionPhoto | PostConnectionBasicPreview | Videos | createVideosPayload | updateVideosPayload | deleteVideosPayload | VideosConnection | VideosAggregator | VideosGroupBy | VideosConnection_id | VideosConnectionCreatedAt | VideosConnectionUpdatedAt | VideosConnectionDateAdded | VideosConnectionRemovalDate | VideosConnectionVideoTitle | VideosConnectionVideoSource | VideosConnectionVideoURL | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileGroupBy | UploadFileConnection_id | UploadFileConnectionCreatedAt | UploadFileConnectionUpdatedAt | UploadFileConnectionName | UploadFileConnectionHash | UploadFileConnectionSha256 | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionProvider | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnection_id | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnection_id | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole
+
+type Mutation {
+  createAbout(input: createAboutInput): createAboutPayload
+  updateAbout(input: updateAboutInput): updateAboutPayload
+  deleteAbout(input: deleteAboutInput): deleteAboutPayload
+  createAppreciation(input: createAppreciationInput): createAppreciationPayload
+  updateAppreciation(input: updateAppreciationInput): updateAppreciationPayload
+  deleteAppreciation(input: deleteAppreciationInput): deleteAppreciationPayload
+  createPost(input: createPostInput): createPostPayload
+  updatePost(input: updatePostInput): updatePostPayload
+  deletePost(input: deletePostInput): deletePostPayload
+  createVideos(input: createVideosInput): createVideosPayload
+  updateVideos(input: updateVideosInput): updateVideosPayload
+  deleteVideos(input: deleteVideosInput): deleteVideosPayload
+
+  """Create a new role"""
+  createRole(input: createRoleInput): createRolePayload
+
+  """Update an existing role"""
+  updateRole(input: updateRoleInput): updateRolePayload
+
+  """Delete an existing role"""
+  deleteRole(input: deleteRoleInput): deleteRolePayload
+  createUser(input: createUserInput): createUserPayload
+  updateUser(input: updateUserInput): updateUserPayload
+  deleteUser(input: deleteUserInput): deleteUserPayload
+  upload(refId: ID, ref: String, source: String, file: Upload!): UploadFile!
+}
+
+type Post {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  body: String
+  title: String
+  created: DateTime
+  photo: UploadFile
+  basicPreview: String
+}
+
+type PostAggregator {
+  count: Int
+}
+
+type PostConnection {
+  values: [Post]
+  groupBy: PostGroupBy
+  aggregate: PostAggregator
+}
+
+type PostConnection_id {
+  key: ID
+  connection: PostConnection
+}
+
+type PostConnectionBasicPreview {
+  key: String
+  connection: PostConnection
+}
+
+type PostConnectionBody {
+  key: String
+  connection: PostConnection
+}
+
+type PostConnectionCreated {
+  key: DateTime
+  connection: PostConnection
+}
+
+type PostConnectionCreatedAt {
+  key: DateTime
+  connection: PostConnection
+}
+
+type PostConnectionPhoto {
+  key: ID
+  connection: PostConnection
+}
+
+type PostConnectionTitle {
+  key: String
+  connection: PostConnection
+}
+
+type PostConnectionUpdatedAt {
+  key: DateTime
+  connection: PostConnection
+}
+
+type PostGroupBy {
+  _id: [PostConnection_id]
+  createdAt: [PostConnectionCreatedAt]
+  updatedAt: [PostConnectionUpdatedAt]
+  body: [PostConnectionBody]
+  title: [PostConnectionTitle]
+  created: [PostConnectionCreated]
+  photo: [PostConnectionPhoto]
+  basicPreview: [PostConnectionBasicPreview]
+}
+
+input PostInput {
+  body: String
+  title: String
+  created: DateTime
+  photo: ID
+  basicPreview: String
+}
+
+type Query {
+  about(id: ID!): About
+  abouts(sort: String, limit: Int, start: Int, where: JSON): [About]
+  aboutsConnection(sort: String, limit: Int, start: Int, where: JSON): AboutConnection
+  appreciation(id: ID!): Appreciation
+  appreciations(sort: String, limit: Int, start: Int, where: JSON): [Appreciation]
+  appreciationsConnection(sort: String, limit: Int, start: Int, where: JSON): AppreciationConnection
+  post(id: ID!): Post
+  posts(sort: String, limit: Int, start: Int, where: JSON): [Post]
+  postsConnection(sort: String, limit: Int, start: Int, where: JSON): PostConnection
+  video(id: ID!): Videos
+  videos(sort: String, limit: Int, start: Int, where: JSON): [Videos]
+  videosConnection(sort: String, limit: Int, start: Int, where: JSON): VideosConnection
+  files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+  filesConnection(sort: String, limit: Int, start: Int, where: JSON): UploadFileConnection
+  role(id: ID!): UsersPermissionsRole
+
+  """
+  Retrieve all the existing roles. You can't apply filters on this query.
+  """
+  roles(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsRole]
+  rolesConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsRoleConnection
+  user(id: ID!): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+  usersConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsUserConnection
+}
+
+input RoleInput {
+  name: String!
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+input updateAboutInput {
+  where: InputID
+  data: AboutInput
+}
+
+type updateAboutPayload {
+  about: About
+}
+
+input updateAppreciationInput {
+  where: InputID
+  data: AppreciationInput
+}
+
+type updateAppreciationPayload {
+  appreciation: Appreciation
+}
+
+input updatePostInput {
+  where: InputID
+  data: PostInput
+}
+
+type updatePostPayload {
+  post: Post
+}
+
+input updateRoleInput {
+  where: InputID
+  data: RoleInput
+}
+
+type updateRolePayload {
+  role: UsersPermissionsRole
+}
+
+input updateUserInput {
+  where: InputID
+  data: UserInput
+}
+
+type updateUserPayload {
+  user: UsersPermissionsUser
+}
+
+input updateVideosInput {
+  where: InputID
+  data: VideosInput
+}
+
+type updateVideosPayload {
+  video: Videos
+}
+
+"""
+The `Upload` scalar type represents a file upload promise that resolves an
+object containing `stream`, `filename`, `mimetype` and `encoding`.
+"""
+scalar Upload
+
+type UploadFile {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
+}
+
+type UploadFileAggregator {
+  count: Int
+}
+
+type UploadFileConnection {
+  values: [UploadFile]
+  groupBy: UploadFileGroupBy
+  aggregate: UploadFileAggregator
+}
+
+type UploadFileConnection_id {
+  key: ID
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionCreatedAt {
+  key: DateTime
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionExt {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionHash {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionMime {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionName {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionProvider {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionSha256 {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionSize {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUpdatedAt {
+  key: DateTime
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUrl {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileGroupBy {
+  _id: [UploadFileConnection_id]
+  createdAt: [UploadFileConnectionCreatedAt]
+  updatedAt: [UploadFileConnectionUpdatedAt]
+  name: [UploadFileConnectionName]
+  hash: [UploadFileConnectionHash]
+  sha256: [UploadFileConnectionSha256]
+  ext: [UploadFileConnectionExt]
+  mime: [UploadFileConnectionMime]
+  size: [UploadFileConnectionSize]
+  url: [UploadFileConnectionUrl]
+  provider: [UploadFileConnectionProvider]
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+type UsersPermissionsPermission {
+  _id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsRoleAggregator {
+  count: Int
+}
+
+type UsersPermissionsRoleConnection {
+  values: [UsersPermissionsRole]
+  groupBy: UsersPermissionsRoleGroupBy
+  aggregate: UsersPermissionsRoleAggregator
+}
+
+type UsersPermissionsRoleConnection_id {
+  key: ID
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionDescription {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionName {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionType {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleGroupBy {
+  _id: [UsersPermissionsRoleConnection_id]
+  name: [UsersPermissionsRoleConnectionName]
+  description: [UsersPermissionsRoleConnectionDescription]
+  type: [UsersPermissionsRoleConnectionType]
+}
+
+type UsersPermissionsUser {
+  _id: ID!
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsUserAggregator {
+  count: Int
+}
+
+type UsersPermissionsUserConnection {
+  values: [UsersPermissionsUser]
+  groupBy: UsersPermissionsUserGroupBy
+  aggregate: UsersPermissionsUserAggregator
+}
+
+type UsersPermissionsUserConnection_id {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionBlocked {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionConfirmed {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionEmail {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionProvider {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionRole {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionUsername {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserGroupBy {
+  _id: [UsersPermissionsUserConnection_id]
+  username: [UsersPermissionsUserConnectionUsername]
+  email: [UsersPermissionsUserConnectionEmail]
+  provider: [UsersPermissionsUserConnectionProvider]
+  confirmed: [UsersPermissionsUserConnectionConfirmed]
+  blocked: [UsersPermissionsUserConnectionBlocked]
+  role: [UsersPermissionsUserConnectionRole]
+}
+
+"""interesting videos I want users to be able to see."""
+type Videos {
+  _id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  dateAdded: DateTime
+  removalDate: DateTime
+  videoTitle: String
+  videoSource: String
+  videoURL: String
+}
+
+type VideosAggregator {
+  count: Int
+}
+
+type VideosConnection {
+  values: [Videos]
+  groupBy: VideosGroupBy
+  aggregate: VideosAggregator
+}
+
+type VideosConnection_id {
+  key: ID
+  connection: VideosConnection
+}
+
+type VideosConnectionCreatedAt {
+  key: DateTime
+  connection: VideosConnection
+}
+
+type VideosConnectionDateAdded {
+  key: DateTime
+  connection: VideosConnection
+}
+
+type VideosConnectionRemovalDate {
+  key: DateTime
+  connection: VideosConnection
+}
+
+type VideosConnectionUpdatedAt {
+  key: DateTime
+  connection: VideosConnection
+}
+
+type VideosConnectionVideoSource {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosConnectionVideoTitle {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosConnectionVideoURL {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosGroupBy {
+  _id: [VideosConnection_id]
+  createdAt: [VideosConnectionCreatedAt]
+  updatedAt: [VideosConnectionUpdatedAt]
+  dateAdded: [VideosConnectionDateAdded]
+  removalDate: [VideosConnectionRemovalDate]
+  videoTitle: [VideosConnectionVideoTitle]
+  videoSource: [VideosConnectionVideoSource]
+  videoURL: [VideosConnectionVideoURL]
+}
+
+input VideosInput {
+  dateAdded: DateTime
+  removalDate: DateTime
+  videoTitle: String
+  videoSource: String
+  videoURL: String
+}
