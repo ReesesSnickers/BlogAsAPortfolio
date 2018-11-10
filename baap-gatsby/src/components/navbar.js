@@ -3,14 +3,8 @@ import React from 'react'
 import '../css/prevbapp.css';
 import '../../node_modules/bulma/css/bulma.min.css';
 
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-// import {  } from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
- 
-// library.add( fab )
-import '../../node_modules/@fortawesome/free-brands-svg-icons'
-import '../../node_modules/@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 
 const Navbar = () => (
@@ -60,9 +54,9 @@ const Navbar = () => (
           <div className="navbar-item">
             <div className="field is-grouped">
               <p className="control">
-                <a className="bd-tw-button button" data-social-network="Facebook" data-social-action="" data-social-target="" target="" href="">
+                <a className="bd-tw-button button" id="shine" data-social-network="Facebook" data-social-action="" data-social-target="" target="" href="">
                   <span className="icon">
-                    <i className="fab fa-facebook-square"></i>
+                    <FontAwesomeIcon className="fab fa-facebook-square" icon={faFacebookSquare}/>
                   </span>
                   <span id="facebookText">
                     Facebook
@@ -70,9 +64,9 @@ const Navbar = () => (
                 </a>
               </p>
               <p className="control">
-                <a className="button" href="https://github.com/ReesesSnickers">
+                <a className="button" id="shine" href="https://github.com/ReesesSnickers">
                   <span className="icon">
-                    <i className="fab fa-github"></i>
+                    <FontAwesomeIcon className="fab fa-github" icon={faGithub}/>
                   </span>
                   <span id="githubText">
                     Github
@@ -80,9 +74,9 @@ const Navbar = () => (
                 </a>
               </p>
               <p className="control">
-                <a className="button" href="https://www.linkedin.com/in/bobbyleeingalls">
+                <a className="button" id="shine" href="https://www.linkedin.com/in/bobbyleeingalls">
                   <span className="icon">
-                    <i className="fab fa-linkedin"></i>
+                    <FontAwesomeIcon className="fab fa-linkedin" icon={faLinkedin}/>
                   </span>
                   <span id="linkedinText">
                     Linkedin
