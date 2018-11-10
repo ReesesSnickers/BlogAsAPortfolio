@@ -2,7 +2,10 @@ import React from 'react'
 
 import '../../node_modules/bulma/css/bulma.css';
 import '../../node_modules/bulma/css/bulma.min.css';
+
 import '../css/prevbapp.css';
+
+import BlogPreview from '../components/blogPostPreview.js';
 
 const Home = () => (
     <div>
@@ -35,20 +38,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <div className="column is-half TransparentHomeDiv">
-                <div>
-                    <section className="section" style={{marginRight: "5vh", backgroundColor: "white", borderRadius: "2.8%"}}>
-                        <div className="container">
-                            <h1 className="title">
-                                Blog
-                            </h1>
-                            <p className="subtitle">
-                                Place holder
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <BlogPreview />
         </div>
 
         <div className="columns">
@@ -58,20 +48,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <div className="column is-half TransparentHomeDiv">
-                <div>
-                    <section className="section" style={{marginRight: "5vh", backgroundColor: "white", borderRadius: "2.8%"}}>
-                        <div className="container">
-                            <h1 className="title">
-                                Blog
-                            </h1>
-                            <p className="subtitle">
-                                Place holder
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <BlogPreview />
         </div>
 
         <div className="columns">
@@ -81,20 +58,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <div className="column is-half TransparentHomeDiv">
-                <div>
-                    <section className="section" style={{marginRight: "5vh", backgroundColor: "white", borderRadius: "2.8%"}}>
-                        <div className="container">
-                            <h1 className="title">
-                                Blog
-                            </h1>
-                            <p className="subtitle">
-                                Place holder
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <BlogPreview />
         </div>
 
         <div class="columns TransparentHomeDiv">
@@ -107,42 +71,42 @@ const Home = () => (
         </div>
     
   
-{/* <div class='carousel carousel-animated carousel-animate-slide' Style="background-color: #111111" data-size="5">
-    <div class='carousel-container' id="videoDiv">
-      <div class='carousel-item is-active'>
-        <iframe class "is-2by1" src="https://www.youtube.com/embed/Gae3mb7qF7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{/* <div className='carousel carousel-animated carousel-animate-slide' Style="background-color: #111111" data-size="5">
+    <div className='carousel-container' id="videoDiv">
+      <div className='carousel-item is-active'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/Gae3mb7qF7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class "is-2by1" src="https://www.youtube.com/embed/us4HTxtjfa8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/us4HTxtjfa8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class "is-2by1" src="https://www.youtube.com/embed/F9GujgK0y2M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/F9GujgK0y2M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class "is-2by1" src="https://www.youtube.com/embed/XhgUClE5uC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/XhgUClE5uC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class="is-2by1" src="https://www.youtube.com/embed/4MxRhjHmiVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/4MxRhjHmiVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class="is-2by1" src="https://www.youtube.com/embed/_P9HqHVPeik" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/_P9HqHVPeik" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class="is-2by1" src="https://www.youtube.com/embed/y4XPudpy-vo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/y4XPudpy-vo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class="is-2by1" src="https://www.youtube.com/embed/E2KOqRceipM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/E2KOqRceipM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class='carousel-item'>
-        <iframe class="is-2by1" src="https://www.youtube.com/embed/__SWFhHocDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div className='carousel-item'>
+        <iframe className="is-2by1" src="https://www.youtube.com/embed/__SWFhHocDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="carousel-navigation is-centered">
-      <div class="carousel-nav-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <div className="carousel-navigation is-centered">
+      <div className="carousel-nav-left">
+        <i className="fa fa-chevron-left" aria-hidden="true"></i>
       </div>
-      <div class="carousel-nav-right">
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      <div className="carousel-nav-right">
+        <i className="fa fa-chevron-right" aria-hidden="true"></i>
       </div>
     </div>
   </div> */}

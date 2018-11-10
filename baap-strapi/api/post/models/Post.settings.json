@@ -26,6 +26,10 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "basicPreview": {
+      "default": "",
+      "type": "text"
     }
   }
 }

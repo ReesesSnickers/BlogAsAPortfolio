@@ -370,7 +370,7 @@ The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://
 """
 scalar JSON
 
-union Morph = About | createAboutPayload | updateAboutPayload | deleteAboutPayload | AboutConnection | AboutAggregator | AboutGroupBy | AboutConnection_id | AboutConnectionCreatedAt | AboutConnectionUpdatedAt | AboutConnectionAboutMeIntro | AboutConnectionDateModified | AboutConnectionAboutMeBody | AboutConnectionBirthDay | AboutConnectionEmail | AboutConnectionLinkedIn | AboutConnectionGitHub | AboutConnectionTwitter | AboutConnectionFacebook | AboutConnectionInstagram | AboutConnectionWebsite | Appreciation | createAppreciationPayload | updateAppreciationPayload | deleteAppreciationPayload | AppreciationConnection | AppreciationAggregator | AppreciationGroupBy | AppreciationConnection_id | AppreciationConnectionCreatedAt | AppreciationConnectionUpdatedAt | AppreciationConnectionFullName | AppreciationConnectionBirthDay | AppreciationConnectionPhoto | AppreciationConnectionEmail | AppreciationConnectionGitHubRepo | AppreciationConnectionLinkedIn | AppreciationConnectionWebSite | AppreciationConnectionSpecialThanks | AppreciationConnectionAssociation | AppreciationConnectionTwitter | Post | createPostPayload | updatePostPayload | deletePostPayload | PostConnection | PostAggregator | PostGroupBy | PostConnection_id | PostConnectionCreatedAt | PostConnectionUpdatedAt | PostConnectionBody | PostConnectionTitle | PostConnectionCreated | PostConnectionPhoto | Videos | createVideosPayload | updateVideosPayload | deleteVideosPayload | VideosConnection | VideosAggregator | VideosGroupBy | VideosConnection_id | VideosConnectionCreatedAt | VideosConnectionUpdatedAt | VideosConnectionDateAdded | VideosConnectionRemovalDate | VideosConnectionVideoTitle | VideosConnectionVideoSource | VideosConnectionVideoURL | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileGroupBy | UploadFileConnection_id | UploadFileConnectionCreatedAt | UploadFileConnectionUpdatedAt | UploadFileConnectionName | UploadFileConnectionHash | UploadFileConnectionSha256 | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionProvider | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnection_id | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnection_id | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole
+union Morph = About | createAboutPayload | updateAboutPayload | deleteAboutPayload | AboutConnection | AboutAggregator | AboutGroupBy | AboutConnection_id | AboutConnectionCreatedAt | AboutConnectionUpdatedAt | AboutConnectionAboutMeIntro | AboutConnectionDateModified | AboutConnectionAboutMeBody | AboutConnectionBirthDay | AboutConnectionEmail | AboutConnectionLinkedIn | AboutConnectionGitHub | AboutConnectionTwitter | AboutConnectionFacebook | AboutConnectionInstagram | AboutConnectionWebsite | Appreciation | createAppreciationPayload | updateAppreciationPayload | deleteAppreciationPayload | AppreciationConnection | AppreciationAggregator | AppreciationGroupBy | AppreciationConnection_id | AppreciationConnectionCreatedAt | AppreciationConnectionUpdatedAt | AppreciationConnectionFullName | AppreciationConnectionBirthDay | AppreciationConnectionPhoto | AppreciationConnectionEmail | AppreciationConnectionGitHubRepo | AppreciationConnectionLinkedIn | AppreciationConnectionWebSite | AppreciationConnectionSpecialThanks | AppreciationConnectionAssociation | AppreciationConnectionTwitter | Post | createPostPayload | updatePostPayload | deletePostPayload | PostConnection | PostAggregator | PostGroupBy | PostConnection_id | PostConnectionCreatedAt | PostConnectionUpdatedAt | PostConnectionBody | PostConnectionTitle | PostConnectionCreated | PostConnectionPhoto | PostConnectionBasicPreview | Videos | createVideosPayload | updateVideosPayload | deleteVideosPayload | VideosConnection | VideosAggregator | VideosGroupBy | VideosConnection_id | VideosConnectionCreatedAt | VideosConnectionUpdatedAt | VideosConnectionDateAdded | VideosConnectionRemovalDate | VideosConnectionVideoTitle | VideosConnectionVideoSource | VideosConnectionVideoURL | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileGroupBy | UploadFileConnection_id | UploadFileConnectionCreatedAt | UploadFileConnectionUpdatedAt | UploadFileConnectionName | UploadFileConnectionHash | UploadFileConnectionSha256 | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionProvider | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnection_id | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnection_id | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole
 
 type Mutation {
   createAbout(input: createAboutInput): createAboutPayload
@@ -408,6 +408,7 @@ type Post {
   title: String
   created: DateTime
   photo: UploadFile
+  basicPreview: String
 }
 
 type PostAggregator {
@@ -422,6 +423,11 @@ type PostConnection {
 
 type PostConnection_id {
   key: ID
+  connection: PostConnection
+}
+
+type PostConnectionBasicPreview {
+  key: String
   connection: PostConnection
 }
 
@@ -463,6 +469,7 @@ type PostGroupBy {
   title: [PostConnectionTitle]
   created: [PostConnectionCreated]
   photo: [PostConnectionPhoto]
+  basicPreview: [PostConnectionBasicPreview]
 }
 
 input PostInput {
@@ -470,6 +477,7 @@ input PostInput {
   title: String
   created: DateTime
   photo: ID
+  basicPreview: String
 }
 
 type Query {
