@@ -9,16 +9,17 @@ const BlogPreview = (props) => (
         <div className="card" style={{borderRadius: "25px"}}>
             <header className="card-header">
                 <p className="card-header-title">
-                    Im a Blog Title
+                    {props.title}
                 </p>
             </header>
             <div className="card-content">
                 <figure class="image">
                     <img src="https://via.placeholder.com/728x150.png" alt="Placeholder image"/>
+                    {/* <img src={props.image} alt="Opps something went wrong"/> */}
                 </figure>
                 <br/>
                 <div class="content">
-                    I am the basic introduction to the blog post
+                    {props.introduction}
                 </div>
             </div>
             <footer class="card-footer">

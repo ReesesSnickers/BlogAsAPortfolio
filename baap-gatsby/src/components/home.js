@@ -38,7 +38,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title="TITLE 1" introduction="INTRODUCTION 1"/>
         </div>
 
         <div className="columns">
@@ -48,7 +48,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title="TITLE 2" introduction="INTRODUCTION 2"/>
         </div>
 
         <div className="columns">
@@ -58,7 +58,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title="TITLE 3" introduction="INTRODUCTION 3"/>
         </div>
 
         <div class="columns TransparentHomeDiv">
