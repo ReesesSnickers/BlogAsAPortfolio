@@ -21,7 +21,7 @@
       "default": "",
       "type": "date"
     },
-    "photo": {
+    "blogPhoto": {
       "model": "file",
       "via": "related",
       "plugin": "upload",

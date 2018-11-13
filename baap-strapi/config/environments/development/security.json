@@ -21,7 +21,7 @@
   },
   "xframe": {
     "enabled": false,
-    "value": "SAMEORIGIN"
+    "value": "ALLOW-FROM *"
   },
   "xss": {
     "enabled": false,
