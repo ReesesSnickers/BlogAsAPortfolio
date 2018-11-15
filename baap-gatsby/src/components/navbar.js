@@ -21,9 +21,9 @@ const Navbar = () => (
         </div>
       </div>
     
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div id="navbarExampleTransparentExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" href="./home.html" id="home">
+          <a className="navbar-item" href="/" id="home">
             Home
           </a>
           <a className="navbar-item" href="./blog.html" id="blog">
@@ -43,7 +43,7 @@ const Navbar = () => (
               <a className="navbar-item" href="./projecthistory.html" id="navbarAboutMeDropdownText">
                 Project History
               </a>
-              <a className="navbar-item" href="./specialthanks.html" id="navbarAboutMeDropdownText">
+              <a className="navbar-item" href="/thanks" id="navbarAboutMeDropdownText">
                 Special Thanks
               </a>
             </div>
