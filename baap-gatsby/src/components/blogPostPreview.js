@@ -8,22 +8,23 @@ const BlogPreview = (props) => (
     <div className="column is-half TransparentHomeDiv">
         <div className="card" style={{borderRadius: "25px"}}>
             <header className="card-header">
-                <p className="card-header-title">
-                    Im a Blog Title
+                <p className="card-header-title" style={{justifyContent: "center", fontSize: "16px"}}>
+                    {props.title}
                 </p>
             </header>
             <div className="card-content">
-                <figure class="image">
+                <figure className="image">
                     <img src="https://via.placeholder.com/728x150.png" alt="Placeholder image"/>
+                    {/* <img src={props.image} alt="Opps something went wrong"/> */}
                 </figure>
                 <br/>
-                <div class="content">
-                    I am the basic introduction to the blog post
+                <div className="content" style={{textAlign: "Justify", overflow: "auto", wordWrap: "break-word"}}>
+                    {props.introduction}
                 </div>
             </div>
-            <footer class="card-footer">
-                <a href="#" class="card-footer-item">View More</a>
-                <a href="#" class="card-footer-item">Share</a>
+            <footer className="card-footer">
+                <a href="#" className="card-footer-item">View More</a>
+                <a href="#" className="card-footer-item">Share</a>
             </footer>
         </div>
     </div>       

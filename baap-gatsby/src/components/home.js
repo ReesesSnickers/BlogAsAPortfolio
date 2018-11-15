@@ -7,7 +7,7 @@ import '../css/prevbapp.css';
 
 import BlogPreview from '../components/blogPostPreview.js';
 
-const Home = () => (
+const Home = (props) => (
     <div>
         <div className="columns TransparentHomeDiv">
             <div className="column homedivider1">
@@ -31,14 +31,14 @@ const Home = () => (
             <div className="column"></div>
         </div>
         
-        <div className="columns">
+        <div className="columns" onClick={() => {console.log(props.blogs[0][0])}}>
             <div className="column is-half TransparentHomeDiv">
                 <section className="section">
                     <div className="container">
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title={props.blogs[0].title} introduction={props.blogs[0].basicPreview}/>
         </div>
 
         <div className="columns">
@@ -48,7 +48,7 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title={props.blogs[1].title} introduction={props.blogs[1].basicPreview}/>
         </div>
 
         <div className="columns">
@@ -58,15 +58,16 @@ const Home = () => (
                     </div>
                 </section>
             </div>
-            <BlogPreview />
+            <BlogPreview title={props.blogs[2].title} introduction={props.blogs[2].basicPreview}/>
+            {/* <BlogPreview title="Pending" introduction="Pending"/> */}
         </div>
 
-        <div class="columns TransparentHomeDiv">
-            <div class="column"></div>
+        <div className="columns TransparentHomeDiv">
+            <div className="column"></div>
         </div>
-        <div class="columns TransparentHomeDiv" style={{paddingBottom: "0vh", marginBottom: "0vh"}}>
-            <div class="column"style={{paddingBottom: "0vh"}}>
-                <div class="homedivider1"></div>
+        <div className="columns TransparentHomeDiv" style={{paddingBottom: "0vh", marginBottom: "0vh"}}>
+            <div className="column"style={{paddingBottom: "0vh"}}>
+                <div className="homedivider1"></div>
             </div>
         </div>
     
