@@ -3,10 +3,8 @@ import { Component } from 'react';
 import { Link } from 'gatsby';
 // import Axios from 'axios';
 
-import PageWrapper from '../wrappers/pageWrapper.js';
-import Home from '../components/home.js';
 
-
+import Home from '../components/home';
 
 class IndexPage extends Component {
   constructor(props) {
@@ -29,10 +27,7 @@ class IndexPage extends Component {
   render(){
     return(
       <div>
-      <PageWrapper>
-        <div>Im HERE</div>
         <Home />
-      </PageWrapper>
       </div>
     );
   }
