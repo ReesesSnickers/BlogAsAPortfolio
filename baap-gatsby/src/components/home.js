@@ -4,7 +4,6 @@ import '../../node_modules/bulma/css/bulma.css';
 import '../../node_modules/bulma/css/bulma.min.css';
 
 
-import BlogPreview from '../components/blogPostPreview.js';
 
 const Home = (props) => (
     <div>
@@ -37,7 +36,6 @@ const Home = (props) => (
                     </div>
                 </section>
             </div>
-            <BlogPreview title={props.blogs[0].title} introduction={props.blogs[0].basicPreview}/>
         </div>
 
         <div className="columns">
@@ -47,7 +45,6 @@ const Home = (props) => (
                     </div>
                 </section>
             </div>
-            <BlogPreview title={props.blogs[1].title} introduction={props.blogs[1].basicPreview}/>
         </div>
 
         <div className="columns">
@@ -57,8 +54,6 @@ const Home = (props) => (
                     </div>
                 </section>
             </div>
-            <BlogPreview title={props.blogs[2].title} introduction={props.blogs[2].basicPreview}/>
-            {/* <BlogPreview title="Pending" introduction="Pending"/> */}
         </div>
 
         <div className="columns TransparentHomeDiv">
