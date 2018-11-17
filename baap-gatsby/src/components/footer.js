@@ -1,7 +1,6 @@
 import React from 'react'
 
 import '../../node_modules/bulma/css/bulma.min.css';
-import '../css/prevbapp.css';
 
 
 const Footer = () => (

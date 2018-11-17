@@ -6,7 +6,6 @@ import Axios from 'axios';
 import PageWrapper from '../wrappers/pageWrapper.js';
 import Home from '../components/home.js';
 
-import '../css/prevbapp.css';
 
 
 class IndexPage extends Component {

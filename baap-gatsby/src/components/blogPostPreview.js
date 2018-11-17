@@ -2,7 +2,6 @@ import React from 'react'
 
 import '../../node_modules/bulma/css/bulma.css';
 import '../../node_modules/bulma/css/bulma.min.css';
-import '../css/prevbapp.css';
 
 const BlogPreview = (props) => (
     <div className="column is-half TransparentHomeDiv">
