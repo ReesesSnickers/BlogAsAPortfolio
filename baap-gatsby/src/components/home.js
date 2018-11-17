@@ -7,6 +7,7 @@ import '../../node_modules/bulma/css/bulma.min.css';
 
 const Home = (props) => (
     <div>
+        <div>IM HERE</div>
         <div className="columns TransparentHomeDiv">
             <div className="column homedivider1">
             </div>
