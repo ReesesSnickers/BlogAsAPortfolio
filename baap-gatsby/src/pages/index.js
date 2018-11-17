@@ -1,20 +1,32 @@
 import React from 'react';
-import { Component } from 'react';
-import { Link } from 'gatsby';
+import { Provider } from "constate";
 // import Axios from 'axios';
-
 
 import Home from '../components/home';
 
-class IndexPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
+const initialState = {
+  global: {
+    count: 10
   }
+};
 
-  // componentWillMount(){
+
+const IndexPage = (props) => (
+  <div>
+    <Provider initialState={initialState} {...props}>
+      <Home />
+    </Provider>
+  </div>
+);
+
+export default IndexPage
+
+
+
+
+// NOTES
+
+// componentWillMount(){
   //   Axios.get('http://127.0.0.1:8080/postrecent')
   //   .then(response => {
   //     this.setState({blogs: response.data})
@@ -23,16 +35,6 @@ class IndexPage extends Component {
   //     console.log(error);
   //   })
   // }
-
-  render(){
-    return(
-      <div>
-        <Home />
-      </div>
-    );
-  }
-}
-export default IndexPage
 
 //example below of working model
 // export const pageQuery = graphql`

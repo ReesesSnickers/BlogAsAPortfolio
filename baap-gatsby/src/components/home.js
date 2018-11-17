@@ -1,11 +1,13 @@
 import React from 'react'
 
-
+import ConstateWrapper from '../wrappers/constateWrapper';
 
 
 const Home = () => (
     <div>
-        Hello my dude
+        <ConstateWrapper>
+        {({ count }) => <div> Hello my dude {count}</div>}
+        </ConstateWrapper>
     </div>
 )
 
