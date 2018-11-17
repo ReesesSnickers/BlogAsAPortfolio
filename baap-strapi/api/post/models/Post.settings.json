@@ -15,21 +15,23 @@
     },
     "title": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "maxLength": 29
     },
     "created": {
       "default": "",
       "type": "date"
     },
-    "blogPhoto": {
+    "basicPreview": {
+      "default": "",
+      "type": "text",
+      "maxLength": 126
+    },
+    "postImage": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
-    },
-    "basicPreview": {
-      "default": "",
-      "type": "text"
     }
   }
 }
