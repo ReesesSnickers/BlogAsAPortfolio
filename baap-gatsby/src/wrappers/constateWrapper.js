@@ -11,7 +11,10 @@ const selectors = {
 };
 
 const effects = {
-
+    test: () => ({ setState }) => {
+        const test1 = () => setState(state => ({ count: state.count + 1 }));
+        test1()
+      }
 };
 
 export default class ConstateWrapper extends Component {
