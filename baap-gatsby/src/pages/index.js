@@ -13,7 +13,7 @@ const initialState = {
 
 const IndexPage = (props) => (
   <div>
-    <Provider initialState={initialState} {...props}>
+    <Provider initialState={initialState} {...props} >
       <Home />
     </Provider>
   </div>
