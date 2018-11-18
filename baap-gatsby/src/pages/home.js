@@ -10,7 +10,7 @@ import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } fr
 import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import ConstateWrapper from '../wrappers/constateWrapper';
-import Navbar from './navbar';
+import Navbar from '../components/navbar';
 
 
 const Home = () => (
