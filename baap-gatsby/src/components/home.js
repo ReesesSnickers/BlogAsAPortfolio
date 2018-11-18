@@ -4,12 +4,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
+import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import ConstateWrapper from '../wrappers/constateWrapper';
-
-import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons'
-import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import Navbar from './navbar';
 
 
 const Home = () => (
@@ -17,11 +18,7 @@ const Home = () => (
         <ConstateWrapper>
         {({}) => (
             <div>
-                <AppBar color="default" style={{width: "100%", background: "linear-gradient(#001F54, #000000)"}}>
-                    <Toolbar>
-                        <p style={{color: "#FFFFFF"}}>IMMALOGO(needberight)</p>
-                    </Toolbar>
-                </AppBar>
+                <Navbar />
                 <Grid container spacing={12} style={{paddingTop: "56px", height: "98.2vh", width: "100%"}}>
                     <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF"}}>
                         <div style={{paddingTop: "2.4vw", paddingLeft: "2.4vw"}}>
