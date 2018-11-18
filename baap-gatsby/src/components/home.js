@@ -4,8 +4,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import ConstateWrapper from '../wrappers/constateWrapper';
+
+import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons'
+import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 
 
 const Home = () => (
@@ -24,29 +28,40 @@ const Home = () => (
                             <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "20vw", width: "20vw"}} />
                         </div>
                         <p>Bobbylee Ingalls</p>
-                        <p style={{textAlign: "justify"}}>
+                        <p>
                             I AM THE ABOUT SECTION
                         </p>
                         <div>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
-                                TEST
+                                <FontAwesomeIcon icon={faFacebookSquare}/>
                             </Button>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
-                                TEST
+                                <FontAwesomeIcon icon={faTwitter}/>
                             </Button>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
-                                TEST
+                                <FontAwesomeIcon icon={faLinkedin}/>
                             </Button>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
-                                TEST
+                                <FontAwesomeIcon icon={faGithub}/>
                             </Button>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
-                                TEST
+                                <FontAwesomeIcon icon={faSnapchatGhost}/>
                             </Button>
                         </div>
                     </Grid>
                     <Grid item xs={9} style={{backgroundColor: "#000000"}}>
-                        
+                        <div style={{color: "#FFFFFF"}}>
+                            <FontAwesomeIcon icon={faTrophy}/>
+                        </div>
+                        <div style={{color: "#FFFFFF"}}>
+                            <FontAwesomeIcon icon={faVideo}/>
+                        </div>
+                        <div style={{color: "#FFFFFF"}}>
+                            <FontAwesomeIcon icon={faComments}/>
+                        </div>
+                        <div style={{color: "#FFFFFF"}}>
+                            <FontAwesomeIcon icon={faNewspaper}/>
+                        </div>
                     </Grid>
                 </Grid>
             </div>
