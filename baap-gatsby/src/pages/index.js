@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from "constate";
 // import Axios from 'axios';
 
-import Home from '../components/home';
+import Home from './home';
 
 const initialState = {
   global: {
@@ -13,7 +13,7 @@ const initialState = {
 
 const IndexPage = (props) => (
   <div>
-    <Provider initialState={initialState} {...props}>
+    <Provider initialState={initialState} {...props} >
       <Home />
     </Provider>
   </div>
