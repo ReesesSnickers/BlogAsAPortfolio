@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Responsive from 'react-responsive';
 
 import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
 import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons';
@@ -12,15 +13,20 @@ import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-so
 import ConstateWrapper from '../wrappers/constateWrapper';
 import Navbar from '../components/navbar';
 
+const FourK = props => <Responsive {...props} minWidth={1441} />;
+const Desktop = props => <Responsive {...props} minWidth={1024} maxWidth={1440}/>;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={1023} />;
+
 
 const Home = () => (
-    <div style={{height: "100vh"}}>
+    <div style={{height: "100%"}}>
         <ConstateWrapper>
         {({}) => (
             <div>
                 <Navbar />
+                <Desktop>
                 <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh"}}>
-                    <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF"}}>
+                    <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF", height: "94.5vh"}}>
                         <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
                             <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "13.2vw", width: "13.2vw"}} />
                         </div>
@@ -46,7 +52,11 @@ const Home = () => (
                             </Button>
                         </div>
                     </Grid>
-                    <Grid item xs={9} style={{backgroundColor: "#000000", paddingLeft: "2.4vw"}}>
+
+
+
+
+                    <Grid item xs={9} style={{backgroundColor: "#000000", paddingLeft: "2.4vw", height: "94.5vh"}}>
                         <Grid container spacing={12} style={{paddingTop: "5vh"}}>
                             <div>
                                 <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
@@ -113,6 +123,7 @@ const Home = () => (
                         </Grid>
                     </Grid>
                 </Grid>
+                </Desktop>
             </div>
         )}
         </ConstateWrapper>
