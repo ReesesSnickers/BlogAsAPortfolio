@@ -14,15 +14,15 @@ import Navbar from '../components/navbar';
 
 
 const Home = () => (
-    <div style={{margin: "0px"}}>
+    <div style={{height: "100vh"}}>
         <ConstateWrapper>
         {({}) => (
             <div>
                 <Navbar />
-                <Grid container spacing={12} style={{paddingTop: "56px", height: "98.2vh", width: "100%"}}>
+                <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh"}}>
                     <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF"}}>
-                        <div style={{paddingTop: "2.4vw", paddingLeft: "2.4vw"}}>
-                            <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "20vw", width: "20vw"}} />
+                        <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
+                            <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "13.2vw", width: "13.2vw"}} />
                         </div>
                         <p>Bobbylee Ingalls</p>
                         <p>
@@ -46,19 +46,71 @@ const Home = () => (
                             </Button>
                         </div>
                     </Grid>
-                    <Grid item xs={9} style={{backgroundColor: "#000000"}}>
-                        <div style={{color: "#FFFFFF"}}>
-                            <FontAwesomeIcon icon={faTrophy}/>
-                        </div>
-                        <div style={{color: "#FFFFFF"}}>
-                            <FontAwesomeIcon icon={faVideo}/>
-                        </div>
-                        <div style={{color: "#FFFFFF"}}>
-                            <FontAwesomeIcon icon={faComments}/>
-                        </div>
-                        <div style={{color: "#FFFFFF"}}>
-                            <FontAwesomeIcon icon={faNewspaper}/>
-                        </div>
+                    <Grid item xs={9} style={{backgroundColor: "#000000", paddingLeft: "2.4vw"}}>
+                        <Grid container spacing={12} style={{paddingTop: "5vh"}}>
+                            <div>
+                                <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
+                                    <Grid container spacing={12}>
+                                        <Grid item xs={12}>
+                                            <FontAwesomeIcon icon={faNewspaper} style={{width: "8vw", height: "8vh"}}/>
+                                        </Grid>
+                                        <Grid item style={{width: "100%", textAlign: "center", fontSize: "1.2vw"}}>
+                                            <p>Resume</p>
+                                        </Grid>
+                                    </Grid>
+                                </Button>
+                            </div>
+                            <div style={{paddingLeft: "2.4vw"}}>
+                                <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
+                                    <Grid container spacing={12}>
+                                        <Grid item xs={12}>
+                                            <FontAwesomeIcon icon={faComments} style={{width: "8vw", height: "8vw"}}/>
+                                        </Grid>
+                                        <Grid item style={{width: "100%", textAlign: "center", fontSize: "1.2vw"}}>
+                                            <p>Blog</p>
+                                        </Grid>
+                                    </Grid>
+                                </Button>
+                            </div>
+                            <div style={{marginLeft: "2.4vw", backgroundColor: "red", height: "13vw", width: "33.5vw"}}>
+                                Im going to be quotes soon
+                            </div>
+                        </Grid>
+                        <Grid container spacing={12}>
+                            <Grid item xs={3} style={{paddingTop: "13vh"}}>
+                                <Grid container spacing={12}>
+                                    <div style={{paddingBottom: "13vh"}}>
+                                        <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
+                                            <Grid container spacing={12}>
+                                                <Grid item xs={12}>
+                                                    <FontAwesomeIcon icon={faVideo} style={{width: "8vw", height: "8vw"}}/>
+                                                </Grid>
+                                                <Grid item style={{width: "100%", textAlign: "center", fontSize: "1.2vw"}}>
+                                                    <p>Videos</p>
+                                                </Grid>
+                                            </Grid>
+                                        </Button>
+                                    </div>
+                                    <div>
+                                        <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
+                                            <Grid container spacing={12}>
+                                                <Grid item xs={12}>
+                                                    <FontAwesomeIcon icon={faTrophy} style={{width: "8vw", height: "8vw"}}/>
+                                                </Grid>
+                                                <Grid item style={{width: "100%", textAlign: "center", fontSize: "1.2vw"}}>
+                                                    <p>Special Thanks</p>
+                                                </Grid>
+                                            </Grid>
+                                        </Button>
+                                    </div>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={9} style={{paddingTop: "15vh"}}>
+                                <div style={{backgroundColor: "red", width: "50.3vw", height: "40vh"}}>
+                                    I will soon be the blog component. TEHE
+                                </div>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </div>
