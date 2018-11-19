@@ -87,9 +87,9 @@ const Home = () => (
                             </div>
                         </Grid>
                         <Grid container spacing={12}>
-                            <Grid item xs={3} style={{paddingTop: "13vh"}}>
+                            <Grid item xs={3} style={{paddingTop: "9vh"}}>
                                 <Grid container spacing={12}>
-                                    <div style={{paddingBottom: "13vh"}}>
+                                    <div style={{paddingBottom: "9vh"}}>
                                         <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "13vw", width: "15vw"}}>
                                             <Grid container spacing={12}>
                                                 <Grid item xs={12}>
