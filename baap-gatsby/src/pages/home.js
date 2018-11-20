@@ -254,40 +254,35 @@ const Home = () => (
                                     </div>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <p>Bobbylee Ingalls</p>
+                                    <p style={{color: "#FFFFFF", textAlign: "Left"}}>Bobbylee Ingalls</p>
                                 </Grid>
                             </Grid>
                             <p>
                                 I AM THE ABOUT SECTION
                             </p>
                         </div>
-                        <div>
+                        <div style={{marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Blog</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Resume</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Videos</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>History</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Special Thanks</p>
                             </Button>
                         </div>
