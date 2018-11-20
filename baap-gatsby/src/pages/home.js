@@ -16,6 +16,8 @@ import Navbar from '../components/navbar';
 const FourK = props => <Responsive {...props} minWidth={1441} />;
 const Desktop = props => <Responsive {...props} minWidth={1024} maxWidth={1440}/>;
 const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={1023} />;
+const Mobile = props => <Responsive {...props} minWidth={320} maxWidth={767} />;
+// const Watch = props => <Responsive {...props} maxWidth={0} />; NEED TO FIGURE OUT THE SPECS
 
 
 const Home = () => (
@@ -25,7 +27,7 @@ const Home = () => (
             <div>
                 <Navbar />
                 <Desktop>
-                    <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh"}}>
+                    <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh", marginLeft: "-8px"}}>
                         <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF", height: "94.5vh"}}>
                             <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
                                 <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "13vw", width: "13vw"}} />
@@ -121,6 +123,8 @@ const Home = () => (
                     </Grid>
                 </Desktop>
 
+                
+
 
 
 
@@ -131,7 +135,7 @@ const Home = () => (
 
 
                 <Tablet>
-                <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh"}}>
+                <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw", height: "100vh", marginLeft: "-8px"}}>
                         <Grid item xs={3} style={{background: "linear-gradient(#004D66, #0099CC)", textAlign: "center", color: "#FFFFFF", height: "94.5vh"}}>
                             <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
                                 <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "13vw", width: "13vw"}} />
@@ -226,6 +230,89 @@ const Home = () => (
                         </Grid>
                     </Grid>
                 </Tablet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Mobile>
+                    <div style={{backgroundColor: "#000000", marginLeft: "-8px", width: "100vw", minHeight: "100vh"}}>
+                        <div style={{background: "linear-gradient(#004D66, #0099CC)", width: "100vw", marginLeft: "-8px"}}>
+                            <Grid container spacing={12} style={{paddingTop: "56px", width: "100vw"}}>
+                                <Grid item xs={6}>
+                                    <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
+                                        <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "25vw", width: "25vw"}} />
+                                    </div>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <p>Bobbylee Ingalls</p>
+                                </Grid>
+                            </Grid>
+                            <p>
+                                I AM THE ABOUT SECTION
+                            </p>
+                        </div>
+                        <div>
+                            <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
+                                <FontAwesomeIcon icon={faComments} style={{}}/>
+                                <p>Blog</p>
+                            </Button>
+                        </div>
+                        <div style={{paddingTop: "10px"}}>
+                            <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
+                                <FontAwesomeIcon icon={faComments} style={{}}/>
+                                <p>Resume</p>
+                            </Button>
+                        </div>
+                        <div style={{paddingTop: "10px"}}>
+                            <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
+                                <FontAwesomeIcon icon={faComments} style={{}}/>
+                                <p>Videos</p>
+                            </Button>
+                        </div>
+                        <div style={{paddingTop: "10px"}}>
+                            <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
+                                <FontAwesomeIcon icon={faComments} style={{}}/>
+                                <p>History</p>
+                            </Button>
+                        </div>
+                        <div style={{paddingTop: "10px"}}>
+                            <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
+                                <FontAwesomeIcon icon={faComments} style={{}}/>
+                                <p>Special Thanks</p>
+                            </Button>
+                        </div>
+                        <div style={{backgroundColor: "red", height: "200px", marginTop: "17px"}}>
+                            im the blog
+                        </div>
+                        <div style={{background: "linear-gradient(#004D66, #0099CC)", marginTop: "17px"}}>
+                            <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
+                                <FontAwesomeIcon icon={faFacebookSquare}/>
+                            </Button>
+                            <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
+                                <FontAwesomeIcon icon={faTwitter}/>
+                            </Button>
+                            <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
+                                <FontAwesomeIcon icon={faLinkedin}/>
+                            </Button>
+                            <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
+                                <FontAwesomeIcon icon={faGithub}/>
+                            </Button>
+                            <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
+                                <FontAwesomeIcon icon={faSnapchatGhost}/>
+                            </Button>
+                        </div>
+                    </div>
+                </Mobile>
             </div>
         )}
         </ConstateWrapper>
