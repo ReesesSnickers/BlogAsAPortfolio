@@ -118,7 +118,7 @@ const Home = () => (
                                     <div style={{height: "200px", marginTop: "17px", marginLeft: "8px", marginRight: "9px"}}>
                                         <Card style={{background: "linear-gradient(#004D66, #0099CC)", height: "200px", color: "#FFFFFF"}}>
                                             <Grid container spacing={12}>
-                                                <Grid item xs={4}>
+                                                <Grid item xs={6}>
                                                     <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
                                                     <Grid container spacing={12}style={{background: "linear-gradient(#001F54, #000000)", height: "31.5px", width: "44.1vw", marginLeft: "4px"}}>
                                                         <Grid item xs={8} style={{marginLeft: "5px", paddingRight: "5px", textAlign: "center", paddingTop: "5px"}}>
@@ -129,7 +129,7 @@ const Home = () => (
                                                         </Grid>
                                                     </Grid>
                                                 </Grid>
-                                                <Grid item xs={8} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
+                                                <Grid item xs={6} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
                                                     <p style={{textAlign: "center", marginLeft: "7px"}}>Blog Title</p>
                                                     <p style={{marginLeft: "7px"}}>Blog Preview that i am testing because I do whateva I wanana</p>
                                                 </Grid>
@@ -300,53 +300,44 @@ const Home = () => (
                         </div>
                         <div style={{marginLeft: "8px", paddingRight: "2px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Blog</p>
                             </Button>
                         </div>
                         <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Resume</p>
                             </Button>
                         </div>
                         <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Videos</p>
                             </Button>
                         </div>
                         <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>History</p>
                             </Button>
                         </div>
                         <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
-                                <FontAwesomeIcon icon={faComments} style={{}}/>
                                 <p>Special Thanks</p>
                             </Button>
                         </div>
-                        <div style={{height: "200px", marginTop: "17px", marginLeft: "8px", marginRight: "9px"}}>
-                            <Card style={{background: "linear-gradient(#004D66, #0099CC)", height: "200px", color: "#FFFFFF"}}>
-                                <Grid container spacing={12}>
-                                    <Grid item xs={4}>
-                                        <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
-                                        <Grid container spacing={12}style={{background: "linear-gradient(#001F54, #000000)", height: "31.5px", width: "44.1vw", marginLeft: "4px"}}>
-                                            <Grid item xs={8} style={{marginLeft: "5px", paddingRight: "5px", textAlign: "center", paddingTop: "5px"}}>
-                                                100k Views
-                                            </Grid>
-                                            <Grid item xs={3} style={{textAlign: "center", paddingTop: "5px"}} onClick={() => {alert('you clicked more')}}>
-                                                More
-                                            </Grid>
-                                        </Grid>
+                        <div style={{height: "300px", marginTop: "17px", marginLeft: "9.9vw", marginRight: "9px", width: "80vw"}}>
+                            <Card style={{background: "linear-gradient(#004D66, #0099CC)", height: "300px", color: "#FFFFFF"}}>
+                                <Grid container spacing={12} style={{background: "linear-gradient(#001F54, #000000)", marginTop: "10px", marginLeft: "3vw", width: "74.3vw"}}>
+                                    <Grid item xs={6} style={{paddingTop: "10px", paddingLeft: "10px", paddingBottom: "7px"}}>
+                                        <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "30vw", width: "30vw"}}/>
                                     </Grid>
-                                    <Grid item xs={8} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
-                                        <p style={{textAlign: "center", marginLeft: "7px"}}>Blog Title</p>
-                                        <p style={{marginLeft: "7px"}}>Blog Preview that i am testing because I do whateva I wanana</p>
+                                    <Grid item xs={6} style={{paddingTop: "10px", textAlign: "center"}}>
+                                        <p style={{marginTop: "40px"}}>100K Views</p>
+                                        <div style={{marginTop: "40px"}}>
+                                            <p>Click to view more!</p>
+                                        </div>
                                     </Grid>
                                 </Grid>
+                                <p style={{marginLeft: "3vw", paddingRight: "3vw", marginTop: "10px", marginBottom: "10px"}}>Blog Title</p>
+                                <p style={{marginLeft: "3vw", paddingRight: "3vw", height: "93px", marginTop: "10px", marginBottom: "0", paddingBottom: "10px"}}>I AM A unfortunately sad blog preview that was created by looking under a rock and yelling while 3 birds argued over child support in their community"</p>
                             </Card>
                         </div>
                         <div style={{background: "linear-gradient(#004D66, #0099CC)", marginTop: "17px"}}>
