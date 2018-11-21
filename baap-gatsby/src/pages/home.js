@@ -6,6 +6,9 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Responsive from 'react-responsive';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
 import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +24,7 @@ const Mobile = props => <Responsive {...props} minWidth={320} maxWidth={767} />;
 
 
 const Home = () => (
+    
     <div style={{height: "100%"}}>
         <ConstateWrapper>
         {({}) => (
@@ -291,8 +295,30 @@ const Home = () => (
                                 <p>Special Thanks</p>
                             </Button>
                         </div>
-                        <div style={{backgroundColor: "red", height: "200px", marginTop: "17px"}}>
-                            im the blog
+                        <div style={{marginTop: "17px"}}>
+
+
+
+
+
+
+                            <Card style={{backgroundColor: "red", height: "200px"}}>
+                                <Grid container spacing={12}>
+                                    <Grid item xs={4}>
+                                        <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
+                                        <div style={{background: "linear-gradient(#004D66, #0099CC)", height: "31.5px", width: "44.1vw", marginLeft: "4px"}}>hello?</div>
+                                    </Grid>
+                                    <Grid item xs={8} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
+
+                                    </Grid>
+                                </Grid>
+                            </Card>
+
+
+
+
+
+
                         </div>
                         <div style={{background: "linear-gradient(#004D66, #0099CC)", marginTop: "17px"}}>
                             <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
