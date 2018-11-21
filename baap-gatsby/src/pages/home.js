@@ -245,8 +245,10 @@ const Home = () => (
                                         <Card style={{background: "linear-gradient(#004D66, #0099CC)", height: "200px", color: "#FFFFFF"}}>
                                             <Grid container spacing={12}>
                                                 <Grid item xs={4}>
-                                                    <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
-                                                    <Grid container spacing={12}style={{background: "linear-gradient(#001F54, #000000)", height: "31.5px", width: "44.1vw", marginLeft: "4px"}}>
+                                                    <div style={{marginLeft: "7px", paddingTop: "7px", paddingBottom: "3px"}}>
+                                                        <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "150px", width: "20vw"}}/>
+                                                    </div>
+                                                    <Grid container spacing={12}style={{background: "linear-gradient(#001F54, #000000)", height: "31.5px", width: "20.1vw", marginLeft: "6px"}}>
                                                         <Grid item xs={8} style={{marginLeft: "5px", paddingRight: "5px", textAlign: "center", paddingTop: "5px"}}>
                                                             100k Views
                                                         </Grid>
@@ -255,9 +257,9 @@ const Home = () => (
                                                         </Grid>
                                                     </Grid>
                                                 </Grid>
-                                                <Grid item xs={8} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
-                                                    <p style={{textAlign: "center", marginLeft: "7px"}}>Blog Title</p>
-                                                    <p style={{marginLeft: "7px"}}>Blog Preview that i am testing because I do whateva I wanana</p>
+                                                <Grid item xs={8} style={{paddingLeft: "3.5vw", paddingRight: "5px", paddingTop: "5px"}}>
+                                                    <p style={{textAlign: "center", marginLeft: "6px"}}>Blog Title</p>
+                                                    <p style={{marginLeft: "6px"}}>Blog Preview that i am testing because I do whateva I wanana</p>
                                                 </Grid>
                                             </Grid>
                                         </Card>
