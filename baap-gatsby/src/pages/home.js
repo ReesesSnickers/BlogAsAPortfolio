@@ -24,6 +24,7 @@ const Mobile = props => <Responsive {...props} minWidth={320} maxWidth={767} />;
 
 
 const Home = () => (
+    
     <div style={{height: "100%"}}>
         <ConstateWrapper>
         {({}) => (
@@ -302,7 +303,15 @@ const Home = () => (
 
 
                             <Card style={{backgroundColor: "red", height: "200px"}}>
-                                <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
+                                <Grid container spacing={12}>
+                                    <Grid item xs={4}>
+                                        <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/07/deadpool_super_duper_cut_deleted_scene_x-men.jpg?itok=mlbyuzFh" alt="Test HC Blog Photo" style={{height: "160px", width: "45vw"}}/>
+                                        <div style={{background: "linear-gradient(#004D66, #0099CC)", height: "31.5px", width: "44.1vw", marginLeft: "4px"}}>hello?</div>
+                                    </Grid>
+                                    <Grid item xs={8} style={{paddingLeft: "12.8vw", paddingRight: "5px", paddingTop: "5px"}}>
+
+                                    </Grid>
+                                </Grid>
                             </Card>
 
 

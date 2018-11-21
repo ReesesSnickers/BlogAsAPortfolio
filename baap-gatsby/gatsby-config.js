@@ -3,6 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+
     
 
 
@@ -23,7 +24,7 @@ module.exports = {
 
 
 
-
+    `gatsby-plugin-react-helmet`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
