@@ -7,6 +7,9 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Responsive from 'react-responsive';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import { faFacebookSquare, faTwitter, faLinkedin, faGithub, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
 import { faTrophy, faVideo, faComments, faNewspaper } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +25,7 @@ const Mobile = props => <Responsive {...props} minWidth={320} maxWidth={767} />;
 
 
 const Home = () => (
+    
     <div style={{height: "100%"}}>
         <ConstateWrapper>
         {({}) => (
