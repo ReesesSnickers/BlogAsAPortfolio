@@ -297,34 +297,34 @@ const Home = () => (
                                     </div>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <p>Bobbylee Ingalls</p>
+                                    <p style={{color: "#FFFFFF", textAlign: "Left"}}>Bobbylee Ingalls</p>
                                 </Grid>
                             </Grid>
                             <p>
                                 I AM THE ABOUT SECTION
                             </p>
                         </div>
-                        <div style={{marginLeft: "8px", paddingRight: "2px"}}>
+                        <div style={{marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
                                 <p>Blog</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
                                 <p>Resume</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
                                 <p>Videos</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
                                 <p>History</p>
                             </Button>
                         </div>
-                        <div style={{paddingTop: "10px", marginLeft: "8px", paddingRight: "2px"}}>
+                        <div style={{paddingTop: "10px", marginLeft: "16px", marginRight: "10px"}}>
                             <Button style={{color: "#FFFFFF", background: "linear-gradient(#004D66, #0099CC)", height: "15vw", width: "98.5%"}}>
                                 <p>Special Thanks</p>
                             </Button>
