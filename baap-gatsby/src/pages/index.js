@@ -1,5 +1,7 @@
 import React from 'react';
+import { Helmet } from "react-helmet"
 import { Provider } from "constate";
+import Favicon from '../favicon.png';
 // import Axios from 'axios';
 
 import Home from './home';
@@ -13,6 +15,12 @@ const initialState = {
 
 const IndexPage = (props) => (
   <div>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>BlogASAPortfolio</title>
+      <link rel="shortcut icon" type="image/png/ico" href={Favicon} />
+      {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+    </Helmet>
     <Provider initialState={initialState} {...props} >
       <Home />
     </Provider>
