@@ -8,9 +8,21 @@ import Home from './home';
 
 const initialState = {
   global: {
-    count: 10
+    count: 10,
+    homeBlog: "i'm the homeblog",
+    aboutMe: "Im the origional about me"
   }
 };
+
+// componentWillMount(){
+  //   Axios.get('http://127.0.0.1:8080/postrecent')
+  //   .then(response => {
+  //     this.setState({blogs: response.data})
+  //     console.log('index', this.state)
+  //   }).catch(error => {
+  //     console.log(error);
+  //   })
+  // }
 
 
 const IndexPage = (props) => (
