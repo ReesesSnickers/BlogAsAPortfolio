@@ -28,7 +28,7 @@ const Home = () => (
     <div style={{height: "100%"}}>
         <ConstateWrapper>
         {({ homeBlog, updateHomeBlog, obtainAboutMe, aboutMe }) => (
-            <div onLoad={() => {console.log('blog',homeBlog, 'about', aboutMe)}}>
+            <div onLoad={obtainAboutMe}>
                 <Navbar />
                 <Desktop>
                     <Grid container spacing={12} style={{width: "100vw", height: "100vh", marginLeft: "-8px", marginTop: "-1px"}}>
@@ -38,7 +38,7 @@ const Home = () => (
                             </div>
                             <p onClick={ obtainAboutMe }>Bobbylee Ingalls</p>
                             <p style={{height: "50vh"}}>
-                                I AM THE ABOUT SECTION
+                                {aboutMe}
                             </p>
                             <div>
                                 <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
@@ -166,7 +166,7 @@ const Home = () => (
                             </div>
                             <p>Bobbylee Ingalls</p>
                             <p style={{height: "50vw"}}>
-                                I AM THE ABOUT SECTION
+                                {aboutMe}
                             </p>
                             <div>
                                 <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
@@ -302,7 +302,7 @@ const Home = () => (
                                 </Grid>
                             </Grid>
                             <p style={{marginLeft: "8px", marginRight: "8px", marginTop: "8px",paddingBottom: "8px", color: "#FFFFFF"}}>
-                                I AM THE ABOUT SECTION
+                                {aboutMe}
                             </p>
                         </div>
                         <div style={{marginLeft: "16px", marginRight: "10px"}}>

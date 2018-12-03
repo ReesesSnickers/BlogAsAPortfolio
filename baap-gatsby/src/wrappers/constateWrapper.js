@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container } from "constate";
+import Axios from 'axios';
 
 
 const actions = {
@@ -16,9 +17,16 @@ const effects = {
         test1()
     },
     obtainAboutMe: () => ({ state, setState}) => {
-        const setAboutMe = () => setState(state =>({aboutMe: "gotcha"}))
-        setAboutMe()
-        console.log(state.aboutMe)
+
+        Axios.get('http://127.0.0.1:8080/about')
+        .then(response => {
+            console.log('CW', response.data[0].aboutMeIntro)
+            const setAboutMe = () => setState(state =>({aboutMe: response.data[0].aboutMeIntro}))
+            setAboutMe()
+            console.log(state.aboutMe)
+        }).catch(error => {
+            console.log(error);
+        })
     },
     // updateHomeBlog: () => ({ state, setState}) => {
     //     const setHomeBlog = () => setState(state =>({homeBlog: "Im a new one hahaha"}))
