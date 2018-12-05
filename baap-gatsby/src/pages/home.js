@@ -27,8 +27,8 @@ const Home = () => (
     
     <div style={{height: "100%"}}>
         <ConstateWrapper>
-        {({}) => (
-            <div>
+        {({ homeBlog, updateHomeBlog, obtainAboutMe, aboutMe }) => (
+            <div onLoad={obtainAboutMe}>
                 <Navbar />
                 <Desktop>
                     <Grid container spacing={12} style={{width: "100vw", height: "100vh", marginLeft: "-8px", marginTop: "-1px"}}>
@@ -36,9 +36,9 @@ const Home = () => (
                             <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
                                 <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "13vw", width: "13vw"}} />
                             </div>
-                            <p>Bobbylee Ingalls</p>
+                            <p onClick={ obtainAboutMe }>Bobbylee Ingalls</p>
                             <p style={{height: "50vh"}}>
-                                I AM THE ABOUT SECTION
+                                {aboutMe}
                             </p>
                             <div>
                                 <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
@@ -166,7 +166,7 @@ const Home = () => (
                             </div>
                             <p>Bobbylee Ingalls</p>
                             <p style={{height: "50vw"}}>
-                                I AM THE ABOUT SECTION
+                                {aboutMe}
                             </p>
                             <div>
                                 <Button variant="contained" style={{color: "#FFFFFF", background: "linear-gradient(#001F54, #000000)"}}>
@@ -292,17 +292,17 @@ const Home = () => (
                     <div style={{backgroundColor: "#000000", marginLeft: "-8px", width: "100vw", Height: "100vh"}}>
                         <div style={{background: "linear-gradient(#004D66, #0099CC)", width: "100vw"}}>
                             <Grid container spacing={12} style={{paddingTop: "16px", width: "100vw"}}>
-                                <Grid item xs={6}>
+                                <Grid item xs={4}>
                                     <div style={{paddingTop: "2.4vw", paddingLeft: "5.8vw"}}>
                                         <Avatar alt="Bobbylee Ingalls" src="https://whathowtowhy.com/wp-content/uploads/2018/04/3653334524001_5588386177001_5588359983001-vs.jpg" style={{height: "25vw", width: "25vw"}} />
                                     </div>
                                 </Grid>
-                                <Grid item xs={6}>
-                                    <p style={{color: "#FFFFFF", textAlign: "Left"}}>Bobbylee Ingalls</p>
+                                <Grid item xs={8}>
+                                    <p style={{color: "#FFFFFF", textAlign: "center", marginTop: "35px"}}>Bobbylee Ingalls</p>
                                 </Grid>
                             </Grid>
-                            <p>
-                                I AM THE ABOUT SECTION
+                            <p style={{marginLeft: "8px", marginRight: "8px", marginTop: "8px",paddingBottom: "8px", color: "#FFFFFF"}}>
+                                {aboutMe}
                             </p>
                         </div>
                         <div style={{marginLeft: "16px", marginRight: "10px"}}>
