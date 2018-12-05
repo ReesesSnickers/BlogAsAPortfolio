@@ -41,7 +41,7 @@ router.get('/post', (req, res) => {
 });
 
 router.get('/postrecent', (req, res) => {
-    Post.find({}).sort({ created: 'desc' }).limit(3).exec().then((posts) => {
+    Post.find({}).sort({ created: 'desc' }).limit(1).exec().then((posts) => {
         res.send(posts);
     }); 
  });
