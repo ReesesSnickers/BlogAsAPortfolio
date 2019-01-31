@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "skills",
+  "info": {
+    "name": "skills",
+    "description": "Current skill sets"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "skill": {
+      "default": "",
+      "type": "string"
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "technical",
+        "general"
+      ]
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

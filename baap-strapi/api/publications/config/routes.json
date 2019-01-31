@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/publications",
+      "handler": "Publications.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/publications/count",
+      "handler": "Publications.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/publications/:_id",
+      "handler": "Publications.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/publications",
+      "handler": "Publications.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/publications/:_id",
+      "handler": "Publications.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/publications/:_id",
+      "handler": "Publications.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

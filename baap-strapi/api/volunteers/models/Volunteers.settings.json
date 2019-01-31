@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "volunteers",
+    "description": "Volunteer work done"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "details": {
+      "default": "",
+      "type": "text"
+    },
+    "supported": {
+      "default": "",
+      "type": "string"
+    },
+    "year": {
+      "default": "",
+      "type": "date"
+    }
+  }
+}

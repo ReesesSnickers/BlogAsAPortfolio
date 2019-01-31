@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/peoples",
+      "handler": "Peoples.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/peoples/count",
+      "handler": "Peoples.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/peoples/:_id",
+      "handler": "Peoples.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/peoples",
+      "handler": "Peoples.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/peoples/:_id",
+      "handler": "Peoples.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/peoples/:_id",
+      "handler": "Peoples.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

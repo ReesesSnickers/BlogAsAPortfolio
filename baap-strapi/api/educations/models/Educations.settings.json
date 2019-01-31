@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "education",
+  "info": {
+    "name": "educations",
+    "description": "Current education"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "enrolled": {
+      "default": "",
+      "type": "date"
+    },
+    "completed": {
+      "default": "",
+      "type": "date"
+    },
+    "major": {
+      "default": "",
+      "type": "string"
+    },
+    "minor": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

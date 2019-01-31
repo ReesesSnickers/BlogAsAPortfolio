@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/logos",
+      "handler": "Logos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/logos/count",
+      "handler": "Logos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/logos/:_id",
+      "handler": "Logos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/logos",
+      "handler": "Logos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/logos/:_id",
+      "handler": "Logos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/logos/:_id",
+      "handler": "Logos.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "connection": "default",
+  "collectionName": "abouts",
+  "info": {
+    "name": "peoples",
+    "description": "About me or others"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "default": "",
+      "type": "string"
+    },
+    "email": {
+      "default": "",
+      "type": "string"
+    },
+    "birthday": {
+      "default": "",
+      "type": "date"
+    },
+    "facebook": {
+      "default": "",
+      "type": "string"
+    },
+    "github": {
+      "default": "",
+      "type": "string"
+    },
+    "instagram": {
+      "default": "",
+      "type": "string"
+    },
+    "codepen": {
+      "default": "",
+      "type": "string"
+    },
+    "linkedin": {
+      "default": "",
+      "type": "string"
+    },
+    "twitter": {
+      "default": "",
+      "type": "string"
+    },
+    "website": {
+      "default": "",
+      "type": "string"
+    },
+    "details": {
+      "default": "",
+      "type": "text"
+    },
+    "viewThanks": {
+      "default": "",
+      "type": "text"
+    },
+    "bringToCompany": {
+      "default": "",
+      "type": "text"
+    },
+    "thanksFinal": {
+      "default": "",
+      "type": "text"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

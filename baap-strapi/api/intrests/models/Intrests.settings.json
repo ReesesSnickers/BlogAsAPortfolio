@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "intrests",
+    "description": "Current Intrests"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

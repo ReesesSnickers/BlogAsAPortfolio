@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "logos",
+    "description": "Current Logos"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "LogoName": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "computerlanguages",
+    "description": "Code languages known"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "comfortability": {
+      "default": "",
+      "type": "integer"
+    }
+  }
+}

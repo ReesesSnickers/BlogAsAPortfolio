@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "studies",
+    "description": "List of educations"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "major": {
+      "default": "",
+      "type": "string"
+    },
+    "minor": {
+      "default": "",
+      "type": "string"
+    },
+    "enrolled": {
+      "default": "",
+      "type": "date"
+    },
+    "completed": {
+      "default": "",
+      "type": "date"
+    }
+  }
+}

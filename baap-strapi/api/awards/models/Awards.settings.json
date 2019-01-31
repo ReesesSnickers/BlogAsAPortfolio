@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "awards",
+    "description": "presented awards"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "type": "string"
+    },
+    "presentedFor": {
+      "default": "",
+      "type": "text"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "recieved": {
+      "default": "",
+      "type": "date"
+    }
+  }
+}

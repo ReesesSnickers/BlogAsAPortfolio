@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "quotes",
+    "description": "Inspiring quotes spoken by the people"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "details": {
+      "default": "",
+      "type": "text"
+    },
+    "author": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

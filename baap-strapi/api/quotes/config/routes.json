@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quotes",
+      "handler": "Quotes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotes/count",
+      "handler": "Quotes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotes/:_id",
+      "handler": "Quotes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotes",
+      "handler": "Quotes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotes/:_id",
+      "handler": "Quotes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quotes/:_id",
+      "handler": "Quotes.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

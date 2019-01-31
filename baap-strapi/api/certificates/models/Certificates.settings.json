@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "certificates",
+    "description": "Certificates earned"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "repID": {
+      "default": "",
+      "type": "string"
+    },
+    "duration": {
+      "default": "",
+      "type": "string"
+    },
+    "completed": {
+      "default": "",
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

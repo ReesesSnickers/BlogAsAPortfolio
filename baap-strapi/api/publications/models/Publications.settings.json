@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "publications",
+    "description": "List of publications"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

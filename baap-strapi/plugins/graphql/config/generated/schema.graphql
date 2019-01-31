@@ -1,0 +1,2151 @@
+"""presented awards"""
+type Awards {
+  _id: ID!
+  Name: String
+  presentedFor: String
+  icon: UploadFile
+  recieved: DateTime
+}
+
+type AwardsAggregator {
+  count: Int
+}
+
+type AwardsConnection {
+  values: [Awards]
+  groupBy: AwardsGroupBy
+  aggregate: AwardsAggregator
+}
+
+type AwardsConnection_id {
+  key: ID
+  connection: AwardsConnection
+}
+
+type AwardsConnectionIcon {
+  key: ID
+  connection: AwardsConnection
+}
+
+type AwardsConnectionName {
+  key: String
+  connection: AwardsConnection
+}
+
+type AwardsConnectionPresentedFor {
+  key: String
+  connection: AwardsConnection
+}
+
+type AwardsConnectionRecieved {
+  key: DateTime
+  connection: AwardsConnection
+}
+
+type AwardsGroupBy {
+  _id: [AwardsConnection_id]
+  Name: [AwardsConnectionName]
+  presentedFor: [AwardsConnectionPresentedFor]
+  icon: [AwardsConnectionIcon]
+  recieved: [AwardsConnectionRecieved]
+}
+
+input AwardsInput {
+  Name: String
+  presentedFor: String
+  icon: ID
+  recieved: DateTime
+}
+
+"""Certificates earned"""
+type Certificates {
+  _id: ID!
+  title: String
+  repID: String
+  duration: String
+  completed: String
+  icon: UploadFile
+}
+
+type CertificatesAggregator {
+  count: Int
+}
+
+type CertificatesConnection {
+  values: [Certificates]
+  groupBy: CertificatesGroupBy
+  aggregate: CertificatesAggregator
+}
+
+type CertificatesConnection_id {
+  key: ID
+  connection: CertificatesConnection
+}
+
+type CertificatesConnectionCompleted {
+  key: String
+  connection: CertificatesConnection
+}
+
+type CertificatesConnectionDuration {
+  key: String
+  connection: CertificatesConnection
+}
+
+type CertificatesConnectionIcon {
+  key: ID
+  connection: CertificatesConnection
+}
+
+type CertificatesConnectionRepID {
+  key: String
+  connection: CertificatesConnection
+}
+
+type CertificatesConnectionTitle {
+  key: String
+  connection: CertificatesConnection
+}
+
+type CertificatesGroupBy {
+  _id: [CertificatesConnection_id]
+  title: [CertificatesConnectionTitle]
+  repID: [CertificatesConnectionRepID]
+  duration: [CertificatesConnectionDuration]
+  completed: [CertificatesConnectionCompleted]
+  icon: [CertificatesConnectionIcon]
+}
+
+input CertificatesInput {
+  title: String
+  repID: String
+  duration: String
+  completed: String
+  icon: ID
+}
+
+"""Code languages known"""
+type Computerlanguages {
+  _id: ID!
+  icon: UploadFile
+  name: String
+  comfortability: Int
+}
+
+type ComputerlanguagesAggregator {
+  count: Int
+  sum: ComputerlanguagesAggregatorSum
+  avg: ComputerlanguagesAggregatorAvg
+  min: ComputerlanguagesAggregatorMin
+  max: ComputerlanguagesAggregatorMax
+}
+
+type ComputerlanguagesAggregatorAvg {
+  comfortability: Float
+}
+
+type ComputerlanguagesAggregatorMax {
+  comfortability: Float
+}
+
+type ComputerlanguagesAggregatorMin {
+  comfortability: Float
+}
+
+type ComputerlanguagesAggregatorSum {
+  comfortability: Float
+}
+
+type ComputerlanguagesConnection {
+  values: [Computerlanguages]
+  groupBy: ComputerlanguagesGroupBy
+  aggregate: ComputerlanguagesAggregator
+}
+
+type ComputerlanguagesConnection_id {
+  key: ID
+  connection: ComputerlanguagesConnection
+}
+
+type ComputerlanguagesConnectionComfortability {
+  key: Int
+  connection: ComputerlanguagesConnection
+}
+
+type ComputerlanguagesConnectionIcon {
+  key: ID
+  connection: ComputerlanguagesConnection
+}
+
+type ComputerlanguagesConnectionName {
+  key: String
+  connection: ComputerlanguagesConnection
+}
+
+type ComputerlanguagesGroupBy {
+  _id: [ComputerlanguagesConnection_id]
+  icon: [ComputerlanguagesConnectionIcon]
+  name: [ComputerlanguagesConnectionName]
+  comfortability: [ComputerlanguagesConnectionComfortability]
+}
+
+input ComputerlanguagesInput {
+  icon: ID
+  name: String
+  comfortability: Int
+}
+
+input createAwardsInput {
+  data: AwardsInput
+}
+
+type createAwardsPayload {
+  award: Awards
+}
+
+input createCertificatesInput {
+  data: CertificatesInput
+}
+
+type createCertificatesPayload {
+  certificate: Certificates
+}
+
+input createComputerlanguagesInput {
+  data: ComputerlanguagesInput
+}
+
+type createComputerlanguagesPayload {
+  computerlanguage: Computerlanguages
+}
+
+input createEducationsInput {
+  data: EducationsInput
+}
+
+type createEducationsPayload {
+  education: Educations
+}
+
+input createExperiencesInput {
+  data: ExperiencesInput
+}
+
+type createExperiencesPayload {
+  experience: Experiences
+}
+
+input createIntrestsInput {
+  data: IntrestsInput
+}
+
+type createIntrestsPayload {
+  intrest: Intrests
+}
+
+input createLanguagesInput {
+  data: LanguagesInput
+}
+
+type createLanguagesPayload {
+  language: Languages
+}
+
+input createLogosInput {
+  data: LogosInput
+}
+
+type createLogosPayload {
+  logo: Logos
+}
+
+input createPeoplesInput {
+  data: PeoplesInput
+}
+
+type createPeoplesPayload {
+  people: Peoples
+}
+
+input createPostsInput {
+  data: PostsInput
+}
+
+type createPostsPayload {
+  post: Posts
+}
+
+input createProjectsInput {
+  data: ProjectsInput
+}
+
+type createProjectsPayload {
+  project: Projects
+}
+
+input createPublicationsInput {
+  data: PublicationsInput
+}
+
+type createPublicationsPayload {
+  publication: Publications
+}
+
+input createQuotesInput {
+  data: QuotesInput
+}
+
+type createQuotesPayload {
+  quote: Quotes
+}
+
+input createRoleInput {
+  data: RoleInput
+}
+
+type createRolePayload {
+  role: UsersPermissionsRole
+}
+
+input createSkillsInput {
+  data: SkillsInput
+}
+
+type createSkillsPayload {
+  skill: Skills
+}
+
+input createStudiesInput {
+  data: StudiesInput
+}
+
+type createStudiesPayload {
+  study: Studies
+}
+
+input createUserInput {
+  data: UserInput
+}
+
+type createUserPayload {
+  user: UsersPermissionsUser
+}
+
+input createVideosInput {
+  data: VideosInput
+}
+
+type createVideosPayload {
+  video: Videos
+}
+
+input createVolunteersInput {
+  data: VolunteersInput
+}
+
+type createVolunteersPayload {
+  volunteer: Volunteers
+}
+
+"""
+The `DateTime` scalar represents a date and time following the ISO 8601 standard
+"""
+scalar DateTime
+
+input deleteAwardsInput {
+  where: InputID
+}
+
+type deleteAwardsPayload {
+  award: Awards
+}
+
+input deleteCertificatesInput {
+  where: InputID
+}
+
+type deleteCertificatesPayload {
+  certificate: Certificates
+}
+
+input deleteComputerlanguagesInput {
+  where: InputID
+}
+
+type deleteComputerlanguagesPayload {
+  computerlanguage: Computerlanguages
+}
+
+input deleteEducationsInput {
+  where: InputID
+}
+
+type deleteEducationsPayload {
+  education: Educations
+}
+
+input deleteExperiencesInput {
+  where: InputID
+}
+
+type deleteExperiencesPayload {
+  experience: Experiences
+}
+
+input deleteIntrestsInput {
+  where: InputID
+}
+
+type deleteIntrestsPayload {
+  intrest: Intrests
+}
+
+input deleteLanguagesInput {
+  where: InputID
+}
+
+type deleteLanguagesPayload {
+  language: Languages
+}
+
+input deleteLogosInput {
+  where: InputID
+}
+
+type deleteLogosPayload {
+  logo: Logos
+}
+
+input deletePeoplesInput {
+  where: InputID
+}
+
+type deletePeoplesPayload {
+  people: Peoples
+}
+
+input deletePostsInput {
+  where: InputID
+}
+
+type deletePostsPayload {
+  post: Posts
+}
+
+input deleteProjectsInput {
+  where: InputID
+}
+
+type deleteProjectsPayload {
+  project: Projects
+}
+
+input deletePublicationsInput {
+  where: InputID
+}
+
+type deletePublicationsPayload {
+  publication: Publications
+}
+
+input deleteQuotesInput {
+  where: InputID
+}
+
+type deleteQuotesPayload {
+  quote: Quotes
+}
+
+input deleteRoleInput {
+  where: InputID
+}
+
+type deleteRolePayload {
+  role: UsersPermissionsRole
+}
+
+input deleteSkillsInput {
+  where: InputID
+}
+
+type deleteSkillsPayload {
+  skill: Skills
+}
+
+input deleteStudiesInput {
+  where: InputID
+}
+
+type deleteStudiesPayload {
+  study: Studies
+}
+
+input deleteUserInput {
+  where: InputID
+}
+
+type deleteUserPayload {
+  user: UsersPermissionsUser
+}
+
+input deleteVideosInput {
+  where: InputID
+}
+
+type deleteVideosPayload {
+  video: Videos
+}
+
+input deleteVolunteersInput {
+  where: InputID
+}
+
+type deleteVolunteersPayload {
+  volunteer: Volunteers
+}
+
+input editAwardsInput {
+  Name: String
+  presentedFor: String
+  icon: ID
+  recieved: DateTime
+}
+
+input editCertificatesInput {
+  title: String
+  repID: String
+  duration: String
+  completed: String
+  icon: ID
+}
+
+input editComputerlanguagesInput {
+  icon: ID
+  name: String
+  comfortability: Int
+}
+
+input editEducationsInput {
+  name: String
+  enrolled: DateTime
+  completed: DateTime
+  major: String
+  minor: String
+}
+
+input editExperiencesInput {
+  company: String
+  contactName: String
+  contactNumber: String
+  icon: ID
+  responsabilities: String
+  title: String
+  started: DateTime
+  ended: DateTime
+}
+
+input editFileInput {
+  name: String
+  hash: String
+  sha256: String
+  ext: String
+  mime: String
+  size: String
+  url: String
+  provider: String
+  public_id: String
+  related: [ID]
+}
+
+input editIntrestsInput {
+  icon: ID
+  name: String
+}
+
+input editLanguagesInput {
+  name: String
+  comfortability: Int
+}
+
+input editLogosInput {
+  Logo: ID
+  LogoName: String
+}
+
+input editPeoplesInput {
+  fullName: String
+  email: String
+  birthday: DateTime
+  facebook: String
+  github: String
+  instagram: String
+  codepen: String
+  linkedin: String
+  twitter: String
+  website: String
+  details: String
+  viewThanks: String
+  bringToCompany: String
+  thanksFinal: String
+  photo: ID
+}
+
+input editPostsInput {
+  title: String
+  body: String
+  preview: String
+  photo: ID
+}
+
+input editProjectsInput {
+  title: String
+  company: String
+  started: DateTime
+  ended: DateTime
+  description: String
+}
+
+input editPublicationsInput {
+  icon: ID
+  url: String
+}
+
+input editQuotesInput {
+  details: String
+  author: String
+}
+
+input editRoleInput {
+  name: String
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+input editSkillsInput {
+  skill: String
+  type: ENUM_SKILLS_TYPE
+  icon: ID
+}
+
+input editStudiesInput {
+  name: String
+  major: String
+  minor: String
+  enrolled: DateTime
+  completed: DateTime
+}
+
+input editUserInput {
+  username: String
+  email: String
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+input editVideosInput {
+  video: ID
+  title: String
+  source: String
+  about: String
+}
+
+input editVolunteersInput {
+  name: String
+  details: String
+  supported: String
+  year: DateTime
+}
+
+"""Current education"""
+type Educations {
+  _id: ID!
+  name: String
+  enrolled: DateTime
+  completed: DateTime
+  major: String
+  minor: String
+}
+
+type EducationsAggregator {
+  count: Int
+}
+
+type EducationsConnection {
+  values: [Educations]
+  groupBy: EducationsGroupBy
+  aggregate: EducationsAggregator
+}
+
+type EducationsConnection_id {
+  key: ID
+  connection: EducationsConnection
+}
+
+type EducationsConnectionCompleted {
+  key: DateTime
+  connection: EducationsConnection
+}
+
+type EducationsConnectionEnrolled {
+  key: DateTime
+  connection: EducationsConnection
+}
+
+type EducationsConnectionMajor {
+  key: String
+  connection: EducationsConnection
+}
+
+type EducationsConnectionMinor {
+  key: String
+  connection: EducationsConnection
+}
+
+type EducationsConnectionName {
+  key: String
+  connection: EducationsConnection
+}
+
+type EducationsGroupBy {
+  _id: [EducationsConnection_id]
+  name: [EducationsConnectionName]
+  enrolled: [EducationsConnectionEnrolled]
+  completed: [EducationsConnectionCompleted]
+  major: [EducationsConnectionMajor]
+  minor: [EducationsConnectionMinor]
+}
+
+input EducationsInput {
+  name: String
+  enrolled: DateTime
+  completed: DateTime
+  major: String
+  minor: String
+}
+
+enum ENUM_SKILLS_TYPE {
+  technical
+  general
+}
+
+"""Work Experience"""
+type Experiences {
+  _id: ID!
+  company: String
+  contactName: String
+  contactNumber: String
+  icon: UploadFile
+  responsabilities: String
+  title: String
+  started: DateTime
+  ended: DateTime
+}
+
+type ExperiencesAggregator {
+  count: Int
+}
+
+type ExperiencesConnection {
+  values: [Experiences]
+  groupBy: ExperiencesGroupBy
+  aggregate: ExperiencesAggregator
+}
+
+type ExperiencesConnection_id {
+  key: ID
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionCompany {
+  key: String
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionContactName {
+  key: String
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionContactNumber {
+  key: String
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionEnded {
+  key: DateTime
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionIcon {
+  key: ID
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionResponsabilities {
+  key: String
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionStarted {
+  key: DateTime
+  connection: ExperiencesConnection
+}
+
+type ExperiencesConnectionTitle {
+  key: String
+  connection: ExperiencesConnection
+}
+
+type ExperiencesGroupBy {
+  _id: [ExperiencesConnection_id]
+  company: [ExperiencesConnectionCompany]
+  contactName: [ExperiencesConnectionContactName]
+  contactNumber: [ExperiencesConnectionContactNumber]
+  icon: [ExperiencesConnectionIcon]
+  responsabilities: [ExperiencesConnectionResponsabilities]
+  title: [ExperiencesConnectionTitle]
+  started: [ExperiencesConnectionStarted]
+  ended: [ExperiencesConnectionEnded]
+}
+
+input ExperiencesInput {
+  company: String
+  contactName: String
+  contactNumber: String
+  icon: ID
+  responsabilities: String
+  title: String
+  started: DateTime
+  ended: DateTime
+}
+
+input FileInput {
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  public_id: String
+  related: [ID]
+}
+
+input InputID {
+  id: ID!
+}
+
+"""Current Intrests"""
+type Intrests {
+  _id: ID!
+  icon: UploadFile
+  name: String
+}
+
+type IntrestsAggregator {
+  count: Int
+}
+
+type IntrestsConnection {
+  values: [Intrests]
+  groupBy: IntrestsGroupBy
+  aggregate: IntrestsAggregator
+}
+
+type IntrestsConnection_id {
+  key: ID
+  connection: IntrestsConnection
+}
+
+type IntrestsConnectionIcon {
+  key: ID
+  connection: IntrestsConnection
+}
+
+type IntrestsConnectionName {
+  key: String
+  connection: IntrestsConnection
+}
+
+type IntrestsGroupBy {
+  _id: [IntrestsConnection_id]
+  icon: [IntrestsConnectionIcon]
+  name: [IntrestsConnectionName]
+}
+
+input IntrestsInput {
+  icon: ID
+  name: String
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+"""Spoken languages known"""
+type Languages {
+  _id: ID!
+  name: String
+  comfortability: Int
+}
+
+type LanguagesAggregator {
+  count: Int
+  sum: LanguagesAggregatorSum
+  avg: LanguagesAggregatorAvg
+  min: LanguagesAggregatorMin
+  max: LanguagesAggregatorMax
+}
+
+type LanguagesAggregatorAvg {
+  comfortability: Float
+}
+
+type LanguagesAggregatorMax {
+  comfortability: Float
+}
+
+type LanguagesAggregatorMin {
+  comfortability: Float
+}
+
+type LanguagesAggregatorSum {
+  comfortability: Float
+}
+
+type LanguagesConnection {
+  values: [Languages]
+  groupBy: LanguagesGroupBy
+  aggregate: LanguagesAggregator
+}
+
+type LanguagesConnection_id {
+  key: ID
+  connection: LanguagesConnection
+}
+
+type LanguagesConnectionComfortability {
+  key: Int
+  connection: LanguagesConnection
+}
+
+type LanguagesConnectionName {
+  key: String
+  connection: LanguagesConnection
+}
+
+type LanguagesGroupBy {
+  _id: [LanguagesConnection_id]
+  name: [LanguagesConnectionName]
+  comfortability: [LanguagesConnectionComfortability]
+}
+
+input LanguagesInput {
+  name: String
+  comfortability: Int
+}
+
+"""Current Logos"""
+type Logos {
+  _id: ID!
+  Logo: UploadFile
+  LogoName: String
+}
+
+type LogosAggregator {
+  count: Int
+}
+
+type LogosConnection {
+  values: [Logos]
+  groupBy: LogosGroupBy
+  aggregate: LogosAggregator
+}
+
+type LogosConnection_id {
+  key: ID
+  connection: LogosConnection
+}
+
+type LogosConnectionLogo {
+  key: ID
+  connection: LogosConnection
+}
+
+type LogosConnectionLogoName {
+  key: String
+  connection: LogosConnection
+}
+
+type LogosGroupBy {
+  _id: [LogosConnection_id]
+  Logo: [LogosConnectionLogo]
+  LogoName: [LogosConnectionLogoName]
+}
+
+input LogosInput {
+  Logo: ID
+  LogoName: String
+}
+
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | Awards | createAwardsPayload | updateAwardsPayload | deleteAwardsPayload | AwardsConnection | AwardsAggregator | AwardsGroupBy | AwardsConnection_id | AwardsConnectionName | AwardsConnectionPresentedFor | AwardsConnectionIcon | AwardsConnectionRecieved | Certificates | createCertificatesPayload | updateCertificatesPayload | deleteCertificatesPayload | CertificatesConnection | CertificatesAggregator | CertificatesGroupBy | CertificatesConnection_id | CertificatesConnectionTitle | CertificatesConnectionRepID | CertificatesConnectionDuration | CertificatesConnectionCompleted | CertificatesConnectionIcon | Computerlanguages | createComputerlanguagesPayload | updateComputerlanguagesPayload | deleteComputerlanguagesPayload | ComputerlanguagesConnection | ComputerlanguagesAggregator | ComputerlanguagesAggregatorSum | ComputerlanguagesAggregatorAvg | ComputerlanguagesAggregatorMin | ComputerlanguagesAggregatorMax | ComputerlanguagesGroupBy | ComputerlanguagesConnection_id | ComputerlanguagesConnectionIcon | ComputerlanguagesConnectionName | ComputerlanguagesConnectionComfortability | Experiences | createExperiencesPayload | updateExperiencesPayload | deleteExperiencesPayload | ExperiencesConnection | ExperiencesAggregator | ExperiencesGroupBy | ExperiencesConnection_id | ExperiencesConnectionCompany | ExperiencesConnectionContactName | ExperiencesConnectionContactNumber | ExperiencesConnectionIcon | ExperiencesConnectionResponsabilities | ExperiencesConnectionTitle | ExperiencesConnectionStarted | ExperiencesConnectionEnded | Intrests | createIntrestsPayload | updateIntrestsPayload | deleteIntrestsPayload | IntrestsConnection | IntrestsAggregator | IntrestsGroupBy | IntrestsConnection_id | IntrestsConnectionIcon | IntrestsConnectionName | Languages | createLanguagesPayload | updateLanguagesPayload | deleteLanguagesPayload | LanguagesConnection | LanguagesAggregator | LanguagesAggregatorSum | LanguagesAggregatorAvg | LanguagesAggregatorMin | LanguagesAggregatorMax | LanguagesGroupBy | LanguagesConnection_id | LanguagesConnectionName | LanguagesConnectionComfortability | Logos | createLogosPayload | updateLogosPayload | deleteLogosPayload | LogosConnection | LogosAggregator | LogosGroupBy | LogosConnection_id | LogosConnectionLogo | LogosConnectionLogoName | Peoples | createPeoplesPayload | updatePeoplesPayload | deletePeoplesPayload | PeoplesConnection | PeoplesAggregator | PeoplesGroupBy | PeoplesConnection_id | PeoplesConnectionFullName | PeoplesConnectionEmail | PeoplesConnectionBirthday | PeoplesConnectionFacebook | PeoplesConnectionGithub | PeoplesConnectionInstagram | PeoplesConnectionCodepen | PeoplesConnectionLinkedin | PeoplesConnectionTwitter | PeoplesConnectionWebsite | PeoplesConnectionDetails | PeoplesConnectionViewThanks | PeoplesConnectionBringToCompany | PeoplesConnectionThanksFinal | PeoplesConnectionPhoto | Posts | createPostsPayload | updatePostsPayload | deletePostsPayload | PostsConnection | PostsAggregator | PostsGroupBy | PostsConnection_id | PostsConnectionTitle | PostsConnectionBody | PostsConnectionPreview | PostsConnectionPhoto | Projects | createProjectsPayload | updateProjectsPayload | deleteProjectsPayload | ProjectsConnection | ProjectsAggregator | ProjectsGroupBy | ProjectsConnection_id | ProjectsConnectionTitle | ProjectsConnectionCompany | ProjectsConnectionStarted | ProjectsConnectionEnded | ProjectsConnectionDescription | Publications | createPublicationsPayload | updatePublicationsPayload | deletePublicationsPayload | PublicationsConnection | PublicationsAggregator | PublicationsGroupBy | PublicationsConnection_id | PublicationsConnectionIcon | PublicationsConnectionUrl | Quotes | createQuotesPayload | updateQuotesPayload | deleteQuotesPayload | QuotesConnection | QuotesAggregator | QuotesGroupBy | QuotesConnection_id | QuotesConnectionDetails | QuotesConnectionAuthor | Skills | createSkillsPayload | updateSkillsPayload | deleteSkillsPayload | SkillsConnection | SkillsAggregator | SkillsGroupBy | SkillsConnection_id | SkillsConnectionSkill | SkillsConnectionType | SkillsConnectionIcon | Studies | createStudiesPayload | updateStudiesPayload | deleteStudiesPayload | StudiesConnection | StudiesAggregator | StudiesGroupBy | StudiesConnection_id | StudiesConnectionName | StudiesConnectionMajor | StudiesConnectionMinor | StudiesConnectionEnrolled | StudiesConnectionCompleted | Videos | createVideosPayload | updateVideosPayload | deleteVideosPayload | VideosConnection | VideosAggregator | VideosGroupBy | VideosConnection_id | VideosConnectionVideo | VideosConnectionTitle | VideosConnectionSource | VideosConnectionAbout | Volunteers | createVolunteersPayload | updateVolunteersPayload | deleteVolunteersPayload | VolunteersConnection | VolunteersAggregator | VolunteersGroupBy | VolunteersConnection_id | VolunteersConnectionName | VolunteersConnectionDetails | VolunteersConnectionSupported | VolunteersConnectionYear | Educations | createEducationsPayload | updateEducationsPayload | deleteEducationsPayload | EducationsConnection | EducationsAggregator | EducationsGroupBy | EducationsConnection_id | EducationsConnectionName | EducationsConnectionEnrolled | EducationsConnectionCompleted | EducationsConnectionMajor | EducationsConnectionMinor | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileGroupBy | UploadFileConnection_id | UploadFileConnectionName | UploadFileConnectionHash | UploadFileConnectionSha256 | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionProvider | UploadFileConnectionPublic_id | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnection_id | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnection_id | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole
+
+type Mutation {
+  createAwards(input: createAwardsInput): createAwardsPayload
+  updateAwards(input: updateAwardsInput): updateAwardsPayload
+  deleteAwards(input: deleteAwardsInput): deleteAwardsPayload
+  createCertificates(input: createCertificatesInput): createCertificatesPayload
+  updateCertificates(input: updateCertificatesInput): updateCertificatesPayload
+  deleteCertificates(input: deleteCertificatesInput): deleteCertificatesPayload
+  createComputerlanguages(input: createComputerlanguagesInput): createComputerlanguagesPayload
+  updateComputerlanguages(input: updateComputerlanguagesInput): updateComputerlanguagesPayload
+  deleteComputerlanguages(input: deleteComputerlanguagesInput): deleteComputerlanguagesPayload
+  createExperiences(input: createExperiencesInput): createExperiencesPayload
+  updateExperiences(input: updateExperiencesInput): updateExperiencesPayload
+  deleteExperiences(input: deleteExperiencesInput): deleteExperiencesPayload
+  createIntrests(input: createIntrestsInput): createIntrestsPayload
+  updateIntrests(input: updateIntrestsInput): updateIntrestsPayload
+  deleteIntrests(input: deleteIntrestsInput): deleteIntrestsPayload
+  createLanguages(input: createLanguagesInput): createLanguagesPayload
+  updateLanguages(input: updateLanguagesInput): updateLanguagesPayload
+  deleteLanguages(input: deleteLanguagesInput): deleteLanguagesPayload
+  createLogos(input: createLogosInput): createLogosPayload
+  updateLogos(input: updateLogosInput): updateLogosPayload
+  deleteLogos(input: deleteLogosInput): deleteLogosPayload
+  createPeoples(input: createPeoplesInput): createPeoplesPayload
+  updatePeoples(input: updatePeoplesInput): updatePeoplesPayload
+  deletePeoples(input: deletePeoplesInput): deletePeoplesPayload
+  createPosts(input: createPostsInput): createPostsPayload
+  updatePosts(input: updatePostsInput): updatePostsPayload
+  deletePosts(input: deletePostsInput): deletePostsPayload
+  createProjects(input: createProjectsInput): createProjectsPayload
+  updateProjects(input: updateProjectsInput): updateProjectsPayload
+  deleteProjects(input: deleteProjectsInput): deleteProjectsPayload
+  createPublications(input: createPublicationsInput): createPublicationsPayload
+  updatePublications(input: updatePublicationsInput): updatePublicationsPayload
+  deletePublications(input: deletePublicationsInput): deletePublicationsPayload
+  createQuotes(input: createQuotesInput): createQuotesPayload
+  updateQuotes(input: updateQuotesInput): updateQuotesPayload
+  deleteQuotes(input: deleteQuotesInput): deleteQuotesPayload
+  createSkills(input: createSkillsInput): createSkillsPayload
+  updateSkills(input: updateSkillsInput): updateSkillsPayload
+  deleteSkills(input: deleteSkillsInput): deleteSkillsPayload
+  createStudies(input: createStudiesInput): createStudiesPayload
+  updateStudies(input: updateStudiesInput): updateStudiesPayload
+  deleteStudies(input: deleteStudiesInput): deleteStudiesPayload
+  createVideos(input: createVideosInput): createVideosPayload
+  updateVideos(input: updateVideosInput): updateVideosPayload
+  deleteVideos(input: deleteVideosInput): deleteVideosPayload
+  createVolunteers(input: createVolunteersInput): createVolunteersPayload
+  updateVolunteers(input: updateVolunteersInput): updateVolunteersPayload
+  deleteVolunteers(input: deleteVolunteersInput): deleteVolunteersPayload
+  createEducations(input: createEducationsInput): createEducationsPayload
+  updateEducations(input: updateEducationsInput): updateEducationsPayload
+  deleteEducations(input: deleteEducationsInput): deleteEducationsPayload
+
+  """Create a new role"""
+  createRole(input: createRoleInput): createRolePayload
+
+  """Update an existing role"""
+  updateRole(input: updateRoleInput): updateRolePayload
+
+  """Delete an existing role"""
+  deleteRole(input: deleteRoleInput): deleteRolePayload
+
+  """Create a new user"""
+  createUser(input: createUserInput): createUserPayload
+
+  """Update an existing user"""
+  updateUser(input: updateUserInput): updateUserPayload
+
+  """Delete an existing user"""
+  deleteUser(input: deleteUserInput): deleteUserPayload
+  upload(refId: ID, ref: String, source: String, file: Upload!): UploadFile!
+}
+
+"""About me or others"""
+type Peoples {
+  _id: ID!
+  fullName: String
+  email: String
+  birthday: DateTime
+  facebook: String
+  github: String
+  instagram: String
+  codepen: String
+  linkedin: String
+  twitter: String
+  website: String
+  details: String
+  viewThanks: String
+  bringToCompany: String
+  thanksFinal: String
+  photo: UploadFile
+}
+
+type PeoplesAggregator {
+  count: Int
+}
+
+type PeoplesConnection {
+  values: [Peoples]
+  groupBy: PeoplesGroupBy
+  aggregate: PeoplesAggregator
+}
+
+type PeoplesConnection_id {
+  key: ID
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionBirthday {
+  key: DateTime
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionBringToCompany {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionCodepen {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionDetails {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionEmail {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionFacebook {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionFullName {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionGithub {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionInstagram {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionLinkedin {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionPhoto {
+  key: ID
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionThanksFinal {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionTwitter {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionViewThanks {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesConnectionWebsite {
+  key: String
+  connection: PeoplesConnection
+}
+
+type PeoplesGroupBy {
+  _id: [PeoplesConnection_id]
+  fullName: [PeoplesConnectionFullName]
+  email: [PeoplesConnectionEmail]
+  birthday: [PeoplesConnectionBirthday]
+  facebook: [PeoplesConnectionFacebook]
+  github: [PeoplesConnectionGithub]
+  instagram: [PeoplesConnectionInstagram]
+  codepen: [PeoplesConnectionCodepen]
+  linkedin: [PeoplesConnectionLinkedin]
+  twitter: [PeoplesConnectionTwitter]
+  website: [PeoplesConnectionWebsite]
+  details: [PeoplesConnectionDetails]
+  viewThanks: [PeoplesConnectionViewThanks]
+  bringToCompany: [PeoplesConnectionBringToCompany]
+  thanksFinal: [PeoplesConnectionThanksFinal]
+  photo: [PeoplesConnectionPhoto]
+}
+
+input PeoplesInput {
+  fullName: String
+  email: String
+  birthday: DateTime
+  facebook: String
+  github: String
+  instagram: String
+  codepen: String
+  linkedin: String
+  twitter: String
+  website: String
+  details: String
+  viewThanks: String
+  bringToCompany: String
+  thanksFinal: String
+  photo: ID
+}
+
+"""Blog posts"""
+type Posts {
+  _id: ID!
+  title: String
+  body: String
+  preview: String
+  photo: UploadFile
+}
+
+type PostsAggregator {
+  count: Int
+}
+
+type PostsConnection {
+  values: [Posts]
+  groupBy: PostsGroupBy
+  aggregate: PostsAggregator
+}
+
+type PostsConnection_id {
+  key: ID
+  connection: PostsConnection
+}
+
+type PostsConnectionBody {
+  key: String
+  connection: PostsConnection
+}
+
+type PostsConnectionPhoto {
+  key: ID
+  connection: PostsConnection
+}
+
+type PostsConnectionPreview {
+  key: String
+  connection: PostsConnection
+}
+
+type PostsConnectionTitle {
+  key: String
+  connection: PostsConnection
+}
+
+type PostsGroupBy {
+  _id: [PostsConnection_id]
+  title: [PostsConnectionTitle]
+  body: [PostsConnectionBody]
+  preview: [PostsConnectionPreview]
+  photo: [PostsConnectionPhoto]
+}
+
+input PostsInput {
+  title: String
+  body: String
+  preview: String
+  photo: ID
+}
+
+"""Notable projects"""
+type Projects {
+  _id: ID!
+  title: String
+  company: String
+  started: DateTime
+  ended: DateTime
+  description: String
+}
+
+type ProjectsAggregator {
+  count: Int
+}
+
+type ProjectsConnection {
+  values: [Projects]
+  groupBy: ProjectsGroupBy
+  aggregate: ProjectsAggregator
+}
+
+type ProjectsConnection_id {
+  key: ID
+  connection: ProjectsConnection
+}
+
+type ProjectsConnectionCompany {
+  key: String
+  connection: ProjectsConnection
+}
+
+type ProjectsConnectionDescription {
+  key: String
+  connection: ProjectsConnection
+}
+
+type ProjectsConnectionEnded {
+  key: DateTime
+  connection: ProjectsConnection
+}
+
+type ProjectsConnectionStarted {
+  key: DateTime
+  connection: ProjectsConnection
+}
+
+type ProjectsConnectionTitle {
+  key: String
+  connection: ProjectsConnection
+}
+
+type ProjectsGroupBy {
+  _id: [ProjectsConnection_id]
+  title: [ProjectsConnectionTitle]
+  company: [ProjectsConnectionCompany]
+  started: [ProjectsConnectionStarted]
+  ended: [ProjectsConnectionEnded]
+  description: [ProjectsConnectionDescription]
+}
+
+input ProjectsInput {
+  title: String
+  company: String
+  started: DateTime
+  ended: DateTime
+  description: String
+}
+
+"""List of publications"""
+type Publications {
+  _id: ID!
+  icon: UploadFile
+  url: String
+}
+
+type PublicationsAggregator {
+  count: Int
+}
+
+type PublicationsConnection {
+  values: [Publications]
+  groupBy: PublicationsGroupBy
+  aggregate: PublicationsAggregator
+}
+
+type PublicationsConnection_id {
+  key: ID
+  connection: PublicationsConnection
+}
+
+type PublicationsConnectionIcon {
+  key: ID
+  connection: PublicationsConnection
+}
+
+type PublicationsConnectionUrl {
+  key: String
+  connection: PublicationsConnection
+}
+
+type PublicationsGroupBy {
+  _id: [PublicationsConnection_id]
+  icon: [PublicationsConnectionIcon]
+  url: [PublicationsConnectionUrl]
+}
+
+input PublicationsInput {
+  icon: ID
+  url: String
+}
+
+type Query {
+  award(id: ID!): Awards
+  awards(sort: String, limit: Int, start: Int, where: JSON): [Awards]
+  awardsConnection(sort: String, limit: Int, start: Int, where: JSON): AwardsConnection
+  certificate(id: ID!): Certificates
+  certificates(sort: String, limit: Int, start: Int, where: JSON): [Certificates]
+  certificatesConnection(sort: String, limit: Int, start: Int, where: JSON): CertificatesConnection
+  computerlanguage(id: ID!): Computerlanguages
+  computerlanguages(sort: String, limit: Int, start: Int, where: JSON): [Computerlanguages]
+  computerlanguagesConnection(sort: String, limit: Int, start: Int, where: JSON): ComputerlanguagesConnection
+  experience(id: ID!): Experiences
+  experiences(sort: String, limit: Int, start: Int, where: JSON): [Experiences]
+  experiencesConnection(sort: String, limit: Int, start: Int, where: JSON): ExperiencesConnection
+  intrest(id: ID!): Intrests
+  intrests(sort: String, limit: Int, start: Int, where: JSON): [Intrests]
+  intrestsConnection(sort: String, limit: Int, start: Int, where: JSON): IntrestsConnection
+  language(id: ID!): Languages
+  languages(sort: String, limit: Int, start: Int, where: JSON): [Languages]
+  languagesConnection(sort: String, limit: Int, start: Int, where: JSON): LanguagesConnection
+  logo(id: ID!): Logos
+  logos(sort: String, limit: Int, start: Int, where: JSON): [Logos]
+  logosConnection(sort: String, limit: Int, start: Int, where: JSON): LogosConnection
+  people(id: ID!): Peoples
+  peoples(sort: String, limit: Int, start: Int, where: JSON): [Peoples]
+  peoplesConnection(sort: String, limit: Int, start: Int, where: JSON): PeoplesConnection
+  post(id: ID!): Posts
+  posts(sort: String, limit: Int, start: Int, where: JSON): [Posts]
+  postsConnection(sort: String, limit: Int, start: Int, where: JSON): PostsConnection
+  project(id: ID!): Projects
+  projects(sort: String, limit: Int, start: Int, where: JSON): [Projects]
+  projectsConnection(sort: String, limit: Int, start: Int, where: JSON): ProjectsConnection
+  publication(id: ID!): Publications
+  publications(sort: String, limit: Int, start: Int, where: JSON): [Publications]
+  publicationsConnection(sort: String, limit: Int, start: Int, where: JSON): PublicationsConnection
+  quote(id: ID!): Quotes
+  quotes(sort: String, limit: Int, start: Int, where: JSON): [Quotes]
+  quotesConnection(sort: String, limit: Int, start: Int, where: JSON): QuotesConnection
+  skill(id: ID!): Skills
+  skills(sort: String, limit: Int, start: Int, where: JSON): [Skills]
+  skillsConnection(sort: String, limit: Int, start: Int, where: JSON): SkillsConnection
+  study(id: ID!): Studies
+  studies(sort: String, limit: Int, start: Int, where: JSON): [Studies]
+  studiesConnection(sort: String, limit: Int, start: Int, where: JSON): StudiesConnection
+  video(id: ID!): Videos
+  videos(sort: String, limit: Int, start: Int, where: JSON): [Videos]
+  videosConnection(sort: String, limit: Int, start: Int, where: JSON): VideosConnection
+  volunteer(id: ID!): Volunteers
+  volunteers(sort: String, limit: Int, start: Int, where: JSON): [Volunteers]
+  volunteersConnection(sort: String, limit: Int, start: Int, where: JSON): VolunteersConnection
+  education(id: ID!): Educations
+  educations(sort: String, limit: Int, start: Int, where: JSON): [Educations]
+  educationsConnection(sort: String, limit: Int, start: Int, where: JSON): EducationsConnection
+  files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+  filesConnection(sort: String, limit: Int, start: Int, where: JSON): UploadFileConnection
+  role(id: ID!): UsersPermissionsRole
+
+  """
+  Retrieve all the existing roles. You can't apply filters on this query.
+  """
+  roles(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsRole]
+  rolesConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsRoleConnection
+  user(id: ID!): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+  usersConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsUserConnection
+  me: UsersPermissionsMe
+}
+
+"""Inspiring quotes spoken by the people"""
+type Quotes {
+  _id: ID!
+  details: String
+  author: String
+}
+
+type QuotesAggregator {
+  count: Int
+}
+
+type QuotesConnection {
+  values: [Quotes]
+  groupBy: QuotesGroupBy
+  aggregate: QuotesAggregator
+}
+
+type QuotesConnection_id {
+  key: ID
+  connection: QuotesConnection
+}
+
+type QuotesConnectionAuthor {
+  key: String
+  connection: QuotesConnection
+}
+
+type QuotesConnectionDetails {
+  key: String
+  connection: QuotesConnection
+}
+
+type QuotesGroupBy {
+  _id: [QuotesConnection_id]
+  details: [QuotesConnectionDetails]
+  author: [QuotesConnectionAuthor]
+}
+
+input QuotesInput {
+  details: String
+  author: String
+}
+
+input RoleInput {
+  name: String!
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+"""Current skill sets"""
+type Skills {
+  _id: ID!
+  skill: String
+  type: ENUM_SKILLS_TYPE
+  icon: UploadFile
+}
+
+type SkillsAggregator {
+  count: Int
+}
+
+type SkillsConnection {
+  values: [Skills]
+  groupBy: SkillsGroupBy
+  aggregate: SkillsAggregator
+}
+
+type SkillsConnection_id {
+  key: ID
+  connection: SkillsConnection
+}
+
+type SkillsConnectionIcon {
+  key: ID
+  connection: SkillsConnection
+}
+
+type SkillsConnectionSkill {
+  key: String
+  connection: SkillsConnection
+}
+
+type SkillsConnectionType {
+  key: String
+  connection: SkillsConnection
+}
+
+type SkillsGroupBy {
+  _id: [SkillsConnection_id]
+  skill: [SkillsConnectionSkill]
+  type: [SkillsConnectionType]
+  icon: [SkillsConnectionIcon]
+}
+
+input SkillsInput {
+  skill: String
+  type: ENUM_SKILLS_TYPE
+  icon: ID
+}
+
+"""List of educations"""
+type Studies {
+  _id: ID!
+  name: String
+  major: String
+  minor: String
+  enrolled: DateTime
+  completed: DateTime
+}
+
+type StudiesAggregator {
+  count: Int
+}
+
+type StudiesConnection {
+  values: [Studies]
+  groupBy: StudiesGroupBy
+  aggregate: StudiesAggregator
+}
+
+type StudiesConnection_id {
+  key: ID
+  connection: StudiesConnection
+}
+
+type StudiesConnectionCompleted {
+  key: DateTime
+  connection: StudiesConnection
+}
+
+type StudiesConnectionEnrolled {
+  key: DateTime
+  connection: StudiesConnection
+}
+
+type StudiesConnectionMajor {
+  key: String
+  connection: StudiesConnection
+}
+
+type StudiesConnectionMinor {
+  key: String
+  connection: StudiesConnection
+}
+
+type StudiesConnectionName {
+  key: String
+  connection: StudiesConnection
+}
+
+type StudiesGroupBy {
+  _id: [StudiesConnection_id]
+  name: [StudiesConnectionName]
+  major: [StudiesConnectionMajor]
+  minor: [StudiesConnectionMinor]
+  enrolled: [StudiesConnectionEnrolled]
+  completed: [StudiesConnectionCompleted]
+}
+
+input StudiesInput {
+  name: String
+  major: String
+  minor: String
+  enrolled: DateTime
+  completed: DateTime
+}
+
+input updateAwardsInput {
+  where: InputID
+  data: editAwardsInput
+}
+
+type updateAwardsPayload {
+  award: Awards
+}
+
+input updateCertificatesInput {
+  where: InputID
+  data: editCertificatesInput
+}
+
+type updateCertificatesPayload {
+  certificate: Certificates
+}
+
+input updateComputerlanguagesInput {
+  where: InputID
+  data: editComputerlanguagesInput
+}
+
+type updateComputerlanguagesPayload {
+  computerlanguage: Computerlanguages
+}
+
+input updateEducationsInput {
+  where: InputID
+  data: editEducationsInput
+}
+
+type updateEducationsPayload {
+  education: Educations
+}
+
+input updateExperiencesInput {
+  where: InputID
+  data: editExperiencesInput
+}
+
+type updateExperiencesPayload {
+  experience: Experiences
+}
+
+input updateIntrestsInput {
+  where: InputID
+  data: editIntrestsInput
+}
+
+type updateIntrestsPayload {
+  intrest: Intrests
+}
+
+input updateLanguagesInput {
+  where: InputID
+  data: editLanguagesInput
+}
+
+type updateLanguagesPayload {
+  language: Languages
+}
+
+input updateLogosInput {
+  where: InputID
+  data: editLogosInput
+}
+
+type updateLogosPayload {
+  logo: Logos
+}
+
+input updatePeoplesInput {
+  where: InputID
+  data: editPeoplesInput
+}
+
+type updatePeoplesPayload {
+  people: Peoples
+}
+
+input updatePostsInput {
+  where: InputID
+  data: editPostsInput
+}
+
+type updatePostsPayload {
+  post: Posts
+}
+
+input updateProjectsInput {
+  where: InputID
+  data: editProjectsInput
+}
+
+type updateProjectsPayload {
+  project: Projects
+}
+
+input updatePublicationsInput {
+  where: InputID
+  data: editPublicationsInput
+}
+
+type updatePublicationsPayload {
+  publication: Publications
+}
+
+input updateQuotesInput {
+  where: InputID
+  data: editQuotesInput
+}
+
+type updateQuotesPayload {
+  quote: Quotes
+}
+
+input updateRoleInput {
+  where: InputID
+  data: editRoleInput
+}
+
+type updateRolePayload {
+  role: UsersPermissionsRole
+}
+
+input updateSkillsInput {
+  where: InputID
+  data: editSkillsInput
+}
+
+type updateSkillsPayload {
+  skill: Skills
+}
+
+input updateStudiesInput {
+  where: InputID
+  data: editStudiesInput
+}
+
+type updateStudiesPayload {
+  study: Studies
+}
+
+input updateUserInput {
+  where: InputID
+  data: editUserInput
+}
+
+type updateUserPayload {
+  user: UsersPermissionsUser
+}
+
+input updateVideosInput {
+  where: InputID
+  data: editVideosInput
+}
+
+type updateVideosPayload {
+  video: Videos
+}
+
+input updateVolunteersInput {
+  where: InputID
+  data: editVolunteersInput
+}
+
+type updateVolunteersPayload {
+  volunteer: Volunteers
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+type UploadFile {
+  _id: ID!
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  public_id: String
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
+}
+
+type UploadFileAggregator {
+  count: Int
+}
+
+type UploadFileConnection {
+  values: [UploadFile]
+  groupBy: UploadFileGroupBy
+  aggregate: UploadFileAggregator
+}
+
+type UploadFileConnection_id {
+  key: ID
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionExt {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionHash {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionMime {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionName {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionProvider {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionPublic_id {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionSha256 {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionSize {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUrl {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileGroupBy {
+  _id: [UploadFileConnection_id]
+  name: [UploadFileConnectionName]
+  hash: [UploadFileConnectionHash]
+  sha256: [UploadFileConnectionSha256]
+  ext: [UploadFileConnectionExt]
+  mime: [UploadFileConnectionMime]
+  size: [UploadFileConnectionSize]
+  url: [UploadFileConnectionUrl]
+  provider: [UploadFileConnectionProvider]
+  public_id: [UploadFileConnectionPublic_id]
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+type UsersPermissionsMe {
+  _id: ID!
+  username: String!
+  email: String!
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsMeRole
+}
+
+type UsersPermissionsMeRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+}
+
+type UsersPermissionsPermission {
+  _id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsRoleAggregator {
+  count: Int
+}
+
+type UsersPermissionsRoleConnection {
+  values: [UsersPermissionsRole]
+  groupBy: UsersPermissionsRoleGroupBy
+  aggregate: UsersPermissionsRoleAggregator
+}
+
+type UsersPermissionsRoleConnection_id {
+  key: ID
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionDescription {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionName {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionType {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleGroupBy {
+  _id: [UsersPermissionsRoleConnection_id]
+  name: [UsersPermissionsRoleConnectionName]
+  description: [UsersPermissionsRoleConnectionDescription]
+  type: [UsersPermissionsRoleConnectionType]
+}
+
+type UsersPermissionsUser {
+  _id: ID!
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsUserAggregator {
+  count: Int
+}
+
+type UsersPermissionsUserConnection {
+  values: [UsersPermissionsUser]
+  groupBy: UsersPermissionsUserGroupBy
+  aggregate: UsersPermissionsUserAggregator
+}
+
+type UsersPermissionsUserConnection_id {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionBlocked {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionConfirmed {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionEmail {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionProvider {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionRole {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionUsername {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserGroupBy {
+  _id: [UsersPermissionsUserConnection_id]
+  username: [UsersPermissionsUserConnectionUsername]
+  email: [UsersPermissionsUserConnectionEmail]
+  provider: [UsersPermissionsUserConnectionProvider]
+  confirmed: [UsersPermissionsUserConnectionConfirmed]
+  blocked: [UsersPermissionsUserConnectionBlocked]
+  role: [UsersPermissionsUserConnectionRole]
+}
+
+"""Videos to promote"""
+type Videos {
+  _id: ID!
+  video: UploadFile
+  title: String
+  source: String
+  about: String
+}
+
+type VideosAggregator {
+  count: Int
+}
+
+type VideosConnection {
+  values: [Videos]
+  groupBy: VideosGroupBy
+  aggregate: VideosAggregator
+}
+
+type VideosConnection_id {
+  key: ID
+  connection: VideosConnection
+}
+
+type VideosConnectionAbout {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosConnectionSource {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosConnectionTitle {
+  key: String
+  connection: VideosConnection
+}
+
+type VideosConnectionVideo {
+  key: ID
+  connection: VideosConnection
+}
+
+type VideosGroupBy {
+  _id: [VideosConnection_id]
+  video: [VideosConnectionVideo]
+  title: [VideosConnectionTitle]
+  source: [VideosConnectionSource]
+  about: [VideosConnectionAbout]
+}
+
+input VideosInput {
+  video: ID
+  title: String
+  source: String
+  about: String
+}
+
+"""Volunteer work done"""
+type Volunteers {
+  _id: ID!
+  name: String
+  details: String
+  supported: String
+  year: DateTime
+}
+
+type VolunteersAggregator {
+  count: Int
+}
+
+type VolunteersConnection {
+  values: [Volunteers]
+  groupBy: VolunteersGroupBy
+  aggregate: VolunteersAggregator
+}
+
+type VolunteersConnection_id {
+  key: ID
+  connection: VolunteersConnection
+}
+
+type VolunteersConnectionDetails {
+  key: String
+  connection: VolunteersConnection
+}
+
+type VolunteersConnectionName {
+  key: String
+  connection: VolunteersConnection
+}
+
+type VolunteersConnectionSupported {
+  key: String
+  connection: VolunteersConnection
+}
+
+type VolunteersConnectionYear {
+  key: DateTime
+  connection: VolunteersConnection
+}
+
+type VolunteersGroupBy {
+  _id: [VolunteersConnection_id]
+  name: [VolunteersConnectionName]
+  details: [VolunteersConnectionDetails]
+  supported: [VolunteersConnectionSupported]
+  year: [VolunteersConnectionYear]
+}
+
+input VolunteersInput {
+  name: String
+  details: String
+  supported: String
+  year: DateTime
+}

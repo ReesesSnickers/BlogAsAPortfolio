@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "projects",
+    "description": "Notable projects"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "company": {
+      "default": "",
+      "type": "string"
+    },
+    "started": {
+      "default": "",
+      "type": "date"
+    },
+    "ended": {
+      "default": "",
+      "type": "date"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

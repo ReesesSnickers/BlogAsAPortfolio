@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "experiences",
+    "description": "Work Experience"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "company": {
+      "default": "",
+      "type": "string"
+    },
+    "contactName": {
+      "default": "",
+      "type": "string"
+    },
+    "contactNumber": {
+      "default": "",
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "responsabilities": {
+      "default": "",
+      "type": "text"
+    },
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "started": {
+      "default": "",
+      "type": "date"
+    },
+    "ended": {
+      "default": "",
+      "type": "date"
+    }
+  }
+}

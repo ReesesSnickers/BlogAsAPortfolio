@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/intrests",
+      "handler": "Intrests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/intrests/count",
+      "handler": "Intrests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/intrests/:_id",
+      "handler": "Intrests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/intrests",
+      "handler": "Intrests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/intrests/:_id",
+      "handler": "Intrests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/intrests/:_id",
+      "handler": "Intrests.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
