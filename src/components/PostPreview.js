@@ -11,7 +11,9 @@ class PostPreview extends Component {
         };
     }
 
-    componentDidUpdate() {
+    componentWillReceiveProps() {
+        console.log('hmm')
+        console.log(this.props.posts !== undefined)
         if ( this.props.posts !== undefined ) {
             if ( this.state.postTitle.length === 0 && this.state.postPreview.length === 0 ) {
                 this.setState({

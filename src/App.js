@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom';
 
 import databaseCalls from './utility/databaseCalls';
@@ -17,6 +18,7 @@ import Card from './components/Card';
 import VideoPreview from './components/VideoPreview';
 import ThankYouLetter from './components/resume/ThankYouLetter';
 import Resume from './components/resume/Resume';
+import Home from './components/Home';
 
 import './App.css';
 
@@ -45,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div>
+      <div style={{height: "100vh"}}>
         {/* <Resume 
           users={this.state.users}
           experiences={this.state.workExperiences}
@@ -59,23 +61,14 @@ class App extends Component {
           publications={this.state.publications}
           skills={this.state.skills}
         /> */}
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <Link to="resume">
-            <button type="button">
-                Resume
-            </button>
-          </Link>
-          <Link to="posts">
-            <button type="button">
-                Posts
-            </button>
-          </Link>
 
-          <Route exact path="/" />
-          <Route path="/resume" render={routeProps => <Resume 
-            {...Object.assign({}, routeProps)} 
+          
+
+          <Route exact={true} path="/" render={() => <Home 
+            posts={this.state.posts}/>}
+          />
+
+          <Route exact={true} path="/resume" render={() => <Resume 
             users={this.state.users}
             experiences={this.state.workExperiences}
             intrests={this.state.intrests}
@@ -88,21 +81,23 @@ class App extends Component {
             publications={this.state.publications}
             skills={this.state.skills}/>}
           />
-          <Route path="/thankyouletter" render={routeProps => <ThankYouLetter 
-            {...Object.assign({}, routeProps)} 
+
+          <Route path="/thankyouletter" render={() => <ThankYouLetter 
             user={this.state.users[0]}/>}
           />
-          <Route path="/posts" render={routeProps => <PostsPage 
-            {...Object.assign({}, routeProps)} 
+
+          <Route path="/posts" render={() => <PostsPage 
             posts={this.state.posts}/>}
+          />
+
+          <Route path="/videos" render={()=> <VideoPreview 
+            videos={this.state.videos[0]}/>}
           />
           
 
-        {/* <ThankYouLetter user={this.state.users[0]} /> */}
-        {/* <VideoPreview videos={this.state.videos[0]} /> */}
+
         {/* <Card /> */}
         {/* <Post posts={this.state.posts[0]}/> */}
-        {/* <PostsPage posts={this.state.posts} /> */}
         {/* <Avatar /> */}
         {/* <Button name="hi" /> */}
         {/* <PostPreview posts={this.state.posts[0]} /> */}
