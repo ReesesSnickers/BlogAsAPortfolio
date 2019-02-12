@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 class PostPreview extends Component {
     constructor(props) {
         super(props);
@@ -11,9 +10,7 @@ class PostPreview extends Component {
         };
     }
 
-    componentWillReceiveProps() {
-        console.log('hmm')
-        console.log(this.props.posts !== undefined)
+    componentDidUpdate() {
         if ( this.props.posts !== undefined ) {
             if ( this.state.postTitle.length === 0 && this.state.postPreview.length === 0 ) {
                 this.setState({

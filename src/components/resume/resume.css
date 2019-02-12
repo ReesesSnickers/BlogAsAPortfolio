@@ -5,3 +5,11 @@
 .link__thank-you-page:hover {
     color: #0099CC;
 }
+
+.link__resume {
+    color: red;
+}
+
+.link__resume:hover {
+    color: #0099CC;
+}

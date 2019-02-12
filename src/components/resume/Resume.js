@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
     Link
 } from 'react-router-dom';
 
@@ -40,7 +38,6 @@ class Resume extends Component {
     render() {
         let buttonText = "<< Thank You Letter"
         return (
-            <Route>
             <PageWrapper>
                 <div style={{backgroundColor: "#F8F8FF", width: "90vw", marginLeft: "5%", marginTop: "5%"}}>
                     <Header user={this.props.users[0]}/>
@@ -79,7 +76,6 @@ class Resume extends Component {
                 </div>
                 <Link to="/thankyouletter" className="link__thank-you-page" style={{textAlign: "right"}}>{buttonText}</Link>
             </PageWrapper>
-            </Route>
         );
     }
 }

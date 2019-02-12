@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PageWrapper from './PageWapper';
 
 class VideoPreview extends Component {
     constructor(props) {
@@ -25,15 +26,17 @@ class VideoPreview extends Component {
     render() {
         console.log(this.props)
         return (
-            <div style={{display: "flex"}}>
-                <div style={{marginTop: "30px", marginLeft: "30px", marginRight: "30px"}}>
-                    <iframe width="860" height="615" title={this.state.videoTitle} src={this.state.videoSource} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <PageWrapper>
+                <div style={{display: "flex"}}>
+                    <div style={{marginTop: "30px", marginLeft: "30px", marginRight: "30px"}}>
+                        <iframe width="860" height="615" title={this.state.videoTitle} src={this.state.videoSource} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <p style={{color: "#FFF", marginTop: "30px", marginRight: "30px", fontSize: "30px"}}>{this.state.videoTitle}</p>
+                        <p style={{color: "#FFF"}}>{this.state.videoAbout}</p>
+                    </div>
                 </div>
-                <div>
-                    <p style={{color: "#FFF", marginTop: "30px", marginRight: "30px", fontSize: "30px"}}>{this.state.videoTitle}</p>
-                    <p style={{color: "#FFF"}}>{this.state.videoAbout}</p>
-                </div>
-            </div>
+            </PageWrapper>
         );
     }
 }

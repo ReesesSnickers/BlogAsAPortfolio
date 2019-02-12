@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import {
+    Link
+} from 'react-router-dom';
 
 
 class Nav extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        };
-    }
-
     render() {
         return (
             <nav style={{width: "100vw", height: "56px", background: "linear-gradient(#001F54, #000)"}}>
@@ -18,8 +14,10 @@ class Nav extends Component {
                         <div style={{borderRadius: "25px", height: "3px", width: "30px", marginBottom: "5px", backgroundColor: "#FFF"}}/>
                         <div style={{borderRadius: "25px", height: "3px", width: "30px", backgroundColor: "#FFF"}}/>
                     </div>
-                    <div style={{position: "absolute", top: "10px", right: "10px"}} onClick={() => alert("clicked the logo")}>
-                        <img src="http://localhost:1337/uploads/12f00c4362824c439abf7320f11d1ae0.png" alt={this.props.altText} style={{height: "30px"}} />
+                    <div style={{position: "absolute", top: "10px", right: "10px"}}>
+                        <Link to={'/'} >
+                            <img src="http://localhost:1337/uploads/12f00c4362824c439abf7320f11d1ae0.png" alt={this.props.altText} style={{height: "30px"}} />
+                        </Link>
                     </div>
             </nav>
         )

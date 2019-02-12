@@ -2,24 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 import {
-    BrowserRouter as Router,
     Link
 } from 'react-router-dom';
 
 const Card = (props) => (
-    <Router>
-        <div style={{color: "black", textDecoration: "none", backgroundColor: "White", flexGrow: "1", margin: "20px"}}>
-            <Link to={"/"+ props.title } style={{color: "black", textDecoration: "none"}}>
-                <div style={{height: "100%", width: "100%"}}>
-                    {/* <img src={props.img} alt={props.altText} /> */}
-                    <p>{props.title}</p>
-                </div>
-            </Link>
-        </div>
-    </Router>
+    <div style={{color: "black", textDecoration: "none", backgroundColor: "White", flexGrow: "1", margin: "20px"}}>
+        <Link to={`/${props.title }`} style={{color: "black", textDecoration: "none"}}>
+            <div style={{height: "100%", width: "100%"}}>
+                {/* <img src={props.img} alt={props.altText} /> */}
+                <p>{props.title}</p>
+            </div>
+        </Link>
+    </div>
 );
 
-Card.PropTypes = {
+Card.propTypes = {
     img: PropTypes.string.isRequired,
     altText: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
