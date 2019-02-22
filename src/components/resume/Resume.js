@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Link
+    Link,
+    withRouter,
 } from 'react-router-dom';
 
 import PageWrapper from '../PageWapper';
